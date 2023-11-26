@@ -22,7 +22,47 @@ export const main = {
   },
   printThemeInfo: () => {
     console.log(
-      `      ______ __  __  ______  __    __  ______                       \r\n     \/\\__  _\/\\ \\_\\ \\\/\\  ___\\\/\\ \"-.\/  \\\/\\  ___\\                      \r\n     \\\/_\/\\ \\\\ \\  __ \\ \\  __\\\\ \\ \\-.\/\\ \\ \\  __\\                      \r\n        \\ \\_\\\\ \\_\\ \\_\\ \\_____\\ \\_\\ \\ \\_\\ \\_____\\                    \r\n         \\\/_\/ \\\/_\/\\\/_\/\\\/_____\/\\\/_\/  \\\/_\/\\\/_____\/                    \r\n                                                               \r\n ______  ______  _____   ______  ______ __  __   __  ______    \r\n\/\\  == \\\/\\  ___\\\/\\  __-.\/\\  ___\\\/\\  ___\/\\ \\\/\\ \"-.\\ \\\/\\  ___\\   \r\n\\ \\  __<\\ \\  __\\\\ \\ \\\/\\ \\ \\  __\\\\ \\  __\\ \\ \\ \\ \\-.  \\ \\  __\\   \r\n \\ \\_\\ \\_\\ \\_____\\ \\____-\\ \\_____\\ \\_\\  \\ \\_\\ \\_\\\\\"\\_\\ \\_____\\ \r\n  \\\/_\/ \/_\/\\\/_____\/\\\/____\/ \\\/_____\/\\\/_\/   \\\/_\/\\\/_\/ \\\/_\/\\\/_____\/\r\n                                                               \r\n  Github: https:\/\/github.com\/EvanNotFound\/hexo-theme-redefine`,
+      `
+tttttttttjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
+tttttttttjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
+ttttttttjtjjjjjjjjjjjfjjjjjjjjjjjjjjjjj
+ttttttttjjjjjjjjEEEEEEEtjjjjjjjjjjjjjjj
+tttttttttjjjjjEEEEEEEEEEEjjjjjjjjjjjjjj
+ttttttttjjjjjEEEEEEEEEEEEEEGjjjjjjjtttt
+ttttttttjjjjKEEEEEEEEEEEEEEEjjjjjtttitj
+tttttttjjtjEDDEEEEEEEEEEEEEEEjjttti;;;;
+tttttttt;;;EEEDDEEEEEEEEEEEEEEttfji;;;;
+tttttttttiDEEEEEEDEEEEEEEEEEEEEti;;ii;;
+tttttttttiEEEEEEEEEEEEEEEEEEEEEi;;;;,::
+;tttttttttEEEEEEEEEEEEEDEEEDEEEi::;,:::
+;tttjjjtjjEEEEEEEEEEEEEEEEEEEEE.::,::;,
+;,;tjjjjjjEEEEEEEEE:EEEEKEEEEEE...::;:,
+,;itjjjjjjEEEDEEEKGLEEEEEKKEEEK;;;,,,;t
+jjttjjjjjjjDiL;DDG,:EEEEEKEEEEK::::;itt
+jjjjjjjjjjjfiLD:Lf.DDEKKKKKEKE,,:::;;tt
+jjjjjjjjjjji,:::::.GDjEEKKEKK;;;;;;,;it
+jjjjjjjjjjjtt:::::::,,;K;;iEEiiii;;,iit
+tjjjjjjjjjjjG:i:,:::,,:L::,Ettiiiii,,;t
+,,,,,itjjjjjj:::::,,:,:::,Etttttt;;;;;i
+,:;::i;jjjjjj::::::::::,LEtttittji,,;it
+,;:,;;;tjjjjj.::::::::::EEjjjjfjjii;,ii
+;iiiiitjjjjjjj:::::::,::Effffjjftiii;tt
+tttttjjjjjjjjjj::::;;:::ijfjfjjiittiitt
+jjjjjjj,,jj;jjjjj;;::::,,ffffjjtttttttt
+jjjjjj,,:jj,jjjjjj::::E::,fffjjjjjttttt
+jjjjjf,j:j:,jjjjjj::::::::fffjjjjjjjjjj
+jjjjjj:j:i:,jjjjj.:::::::,:jjjjjjjjjjjj
+jtjjjj:,::::jjjj::,.::::.::,jjjjjjjjjjj
+jjj,jj:::,,,jjj.:f:::::::,:::fjjjjjjjjj
+jjj,.j.,,:,:jj.:::::::,,:::::,fjjfjjjff
+jjjj::jt,;::f;,:.....,:::::::.:jfjjjjff
+jjjjj:,;:,::::::.f.,::::::::::.:ffjjjjj
+jjjjjj:::,::,t::::::,::::::::::::ffjjff
+jjjjjj::,:::,::::::,:::::::::::,,ffjjff
+jjjjjj:i::::,:::i:,::.:::::::::,.tfjffj
+jjjjjj:;::::::,.::,::::::::::::;,:fffff
+jjjjjj:;;::::::f,::::::::::::::,,:ffffj
+      \n  Github: https:\/\/github.com\/aduie`
     ); // console log message
   },
   setStyleStatus: () => {
