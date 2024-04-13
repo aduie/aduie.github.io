@@ -96,6 +96,80 @@
       </tags>
   </entry>
   <entry>
+    <title>初识NodeJs模块化</title>
+    <url>/2024/01/29/%E5%88%9D%E8%AF%86NodeJs/</url>
+    <content><![CDATA[<h2 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h2><h3 id="1-当我们使用require-方法时，会执行被加载模块中的代码"><a href="#1-当我们使用require-方法时，会执行被加载模块中的代码" class="headerlink" title="1.当我们使用require()方法时，会执行被加载模块中的代码"></a>1.当我们使用<code>require()</code>方法时，会执行被加载模块中的代码</h3><div class="highlight-container" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 1.导入http模块</span></span><br><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">&#x27;http&#x27;</span>);</span><br><span class="line"><span class="comment">// 2.创建 web 服务器实例</span></span><br><span class="line"><span class="keyword">const</span> server = http.<span class="title function_">createServer</span>()</span><br><span class="line"><span class="comment">// 3.为服务器实例绑定 request，监听客户端请求</span></span><br><span class="line">server.<span class="title function_">on</span>(<span class="string">&#x27;request&#x27;</span>, <span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;&#125;)</span><br><span class="line">server.<span class="title function_">listen</span>(<span class="number">80</span>,<span class="keyword">function</span> (<span class="params"></span>) &#123;&#125;)</span><br></pre></td></tr></table></figure></div>
+<ul>
+<li><p>我们写的自定义模块，也可以被<code>require()</code>出来</p>
+</li>
+<li><p>在模块内定义的成员，无法在外面被访问，防止全局变量污染问题。</p>
+</li>
+<li><p>module可以向外共享模块作用域中的成员。</p>
+</li>
+<li><p>而在每个我们写的js文件中，都有一个module对象，它里面存储了和当前模块的信息。可以用代码打印：<br><code>console.log(module);</code></p>
+<ul>
+<li>在自定义模块内，使用 <strong>module.exports</strong> 对象，将模块内成员共享出去，给外界使用，默认在自定义模块化中， <em><strong>module.exports &#x3D; {}</strong></em></li>
+<li><em>外界</em> 用 <em><strong>require()</strong></em> 方法导入自定义模块时，得到的就是 <strong>module.exports</strong> 所指的对象。</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-使用命令-npm-init-y-可以快速创建配置文件-package-json-，但要注意，上述命令只能在英文目录下运行，不能有中文或空格"><a href="#2-使用命令-npm-init-y-可以快速创建配置文件-package-json-，但要注意，上述命令只能在英文目录下运行，不能有中文或空格" class="headerlink" title="2.使用命令 npm init -y 可以快速创建配置文件 package.json ，但要注意，上述命令只能在英文目录下运行，不能有中文或空格"></a>2.使用命令 <code>npm init -y</code> 可以快速创建配置文件 <em><strong>package.json</strong></em> ，但要注意，上述命令只能在英文目录下运行，不能有中文或空格</h3><ul>
+<li><em><strong>package.json</strong></em> 配置文件，可用来记录项目中安装了哪些包。从而方便剔除 <em><strong>node_modules</strong></em> 目录之后，方便成员之间共享代码。</li>
+</ul>
+<h3 id="3-在-package-json-配置文件中，有一个-dependencies-节点，专门用来记录您使用-npm-install-命令安装了哪些包。"><a href="#3-在-package-json-配置文件中，有一个-dependencies-节点，专门用来记录您使用-npm-install-命令安装了哪些包。" class="headerlink" title="3.在 package.json 配置文件中，有一个 dependencies 节点，专门用来记录您使用 npm install 命令安装了哪些包。"></a>3.在 <em><strong>package.json</strong></em> 配置文件中，有一个 <code>dependencies</code> 节点，专门用来记录您使用 <strong>npm install</strong> 命令安装了哪些包。</h3><ul>
+<li><p>当我们下载别人的项目时，我们可以使用命令 <code>npm install</code> 来下载该项目所依赖的包，也就是 <strong>package.json</strong> 下的 <strong>dependencies</strong> 的节点所显示的包</p>
+</li>
+<li><p>卸载某个包，只要使用命令 <code>npm uninstall 包名</code></p>
+</li>
+</ul>
+<h3 id="4-devDependencies-节点-只在开发阶段用得到"><a href="#4-devDependencies-节点-只在开发阶段用得到" class="headerlink" title="4. devDependencies 节点:只在开发阶段用得到"></a>4. <em><strong>devDependencies</strong></em> 节点:只在开发阶段用得到</h3><ul>
+<li>如果某些包，<strong>只在项目开发阶段</strong>会用到，在<strong>项目上线之后不会用到</strong>，则建议把这些包记录到 <em><strong>devDependencies</strong></em>节点中。与之对应的，如果某些包在<strong>开发</strong>和<strong>项目上线之后</strong>都会用到，则建议把这些包记录到 <em>devDependencies</em>节点中。</li>
+<li>使用命令<code>npm i 包名 -D</code>意思就是说，将这个包记录到<em>devDependencies</em>节点中。上述命令<strong>等同于</strong> <code>npm install 包名 --save-dev</code></li>
+</ul>
+<h3 id="5-解决下载包速度慢的问题"><a href="#5-解决下载包速度慢的问题" class="headerlink" title="5.解决下载包速度慢的问题"></a>5.解决下载包速度慢的问题</h3><ul>
+<li>切换 <strong>npm</strong> 的下包镜像源</li>
+</ul>
+<div class="highlight-container" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 查看当前的下包镜像源</span></span><br><span class="line">npm config get registry</span><br><span class="line"><span class="comment">// 将下包的镜像源切换为淘宝镜像源</span></span><br><span class="line">npm config set registry=<span class="attr">http</span>:<span class="comment">//registry.npm.taobao.org/</span></span><br></pre></td></tr></table></figure></div>
+<ul>
+<li>当然，也可以使用快捷方式切换，但我们需要安装 <code>nrm</code><div class="highlight-container" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 安装 nrm</span></span><br><span class="line">npm i nrm -g</span><br><span class="line"><span class="comment">// 查看所有可用的镜像源</span></span><br><span class="line">nrm ls</span><br><span class="line"><span class="comment">// 将下包的镜像源切换为 taobao 镜像</span></span><br><span class="line">nrm use taobao</span><br></pre></td></tr></table></figure></div></li>
+</ul>
+<h3 id="6-包的分类"><a href="#6-包的分类" class="headerlink" title="6.包的分类"></a>6.包的分类</h3><h4 id="6-1-全局包"><a href="#6-1-全局包" class="headerlink" title="6.1 全局包"></a>6.1 全局包</h4><ol>
+<li>在执行 <code>npm install</code> 命令时，如果提供了 <code>-g</code>参数，则会把包安装为<strong>全局包</strong><div class="highlight-container" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 全局安装指定的包</span></span><br><span class="line">npm -i 包名 -g  </span><br><span class="line"><span class="comment">// 卸载全局安装的包</span></span><br><span class="line">npm uninstall 包名 -g</span><br></pre></td></tr></table></figure></div>
+<blockquote>
+<p>只有工具性质的包才有全局安装的必要性，以为他们提供好用的终端命令。</p>
+</blockquote>
+</li>
+</ol>
+<h4 id="6-2-i5ting-toc"><a href="#6-2-i5ting-toc" class="headerlink" title="6.2 i5ting_toc"></a>6.2 <code>i5ting_toc</code></h4><ol>
+<li><strong>i5ting_toc</strong> 是一个可以<strong>把md文档</strong>转换为 <strong>html</strong> 页面的小工具，使用步骤为：<div class="highlight-container" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 将i5ting_toc安装为全局包</span></span><br><span class="line">npm install -g i5ting_toc</span><br><span class="line"><span class="comment">// 调用 i5ting_toc ，轻松实现 md 转html </span></span><br><span class="line">i5ting_toc -f 要转换的md文件路径 -o</span><br></pre></td></tr></table></figure></div></li>
+</ol>
+<h3 id="7-包的规范"><a href="#7-包的规范" class="headerlink" title="7.包的规范"></a>7.包的规范</h3><ol>
+<li>一个规范的包，符合下面三点要求：</li>
+</ol>
+<ul>
+<li>包必须<strong>以单独的目录</strong>存在</li>
+<li>包的<strong>顶级目录下</strong>必须包含 <code>package.json</code> 这个包管理配置文件</li>
+<li>package.json 中必须包含 <code>name</code>,<code>version</code>,<code>main</code> 三个属性，分别是<code>包的名字</code>，<code>包的版本号</code>，<code>包的入口</code>。</li>
+</ul>
+<h3 id="8-设计一款自己的“包”"><a href="#8-设计一款自己的“包”" class="headerlink" title="8. 设计一款自己的“包”"></a>8. 设计一款自己的<code>“包”</code></h3><ul>
+<li>新建<code>包名</code>文件夹，作为包的<strong>根目录</strong></li>
+<li>在<code>包</code>文件夹中，新建三个文件：<ul>
+<li><strong>package.json</strong>（包管理配置文件）</li>
+<li><strong>index.js</strong>（包的入口文件）</li>
+<li><strong>README.md</strong>（包的说明文档）</li>
+</ul>
+</li>
+<li>建成包之后，可以上传至<code>npm</code>官网包管理服务器中。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Study</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>学习-软件工程导论-不挂科笔记</title>
     <url>/2023/11/25/%E5%AD%A6%E4%B9%A0-%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%AF%BC%E8%AE%BA-%E4%B8%8D%E6%8C%82%E7%A7%91%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p><strong>随着期末将近，又是一支笔，一个夜晚，一个奇迹啦😂，但是要知道，有些知识，真不是一个晚上能记忆完的😷</strong></p>
@@ -180,80 +254,6 @@
                      data-src="https://i.imgs.ovh/2023/11/20/HufO3.jpeg"
                       alt="云边的羽晨书坊"
                 >回复“ <em><strong>软件工程导论</strong></em> ”即可💕</h3><h3 id="如需访问知识框图，请点这里😉"><a href="#如需访问知识框图，请点这里😉" class="headerlink" title="如需访问知识框图，请点这里😉"></a>如需访问知识框图，<a class="link"   href="https://www.processon.com/view/link/6561e005b4e5d07897243859" >请点这里😉 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></h3>]]></content>
-      <categories>
-        <category>Study</category>
-      </categories>
-      <tags>
-        <tag>学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>初识NodeJs模块化</title>
-    <url>/2024/01/29/%E5%88%9D%E8%AF%86NodeJs/</url>
-    <content><![CDATA[<h2 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h2><h3 id="1-当我们使用require-方法时，会执行被加载模块中的代码"><a href="#1-当我们使用require-方法时，会执行被加载模块中的代码" class="headerlink" title="1.当我们使用require()方法时，会执行被加载模块中的代码"></a>1.当我们使用<code>require()</code>方法时，会执行被加载模块中的代码</h3><div class="highlight-container" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 1.导入http模块</span></span><br><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">&#x27;http&#x27;</span>);</span><br><span class="line"><span class="comment">// 2.创建 web 服务器实例</span></span><br><span class="line"><span class="keyword">const</span> server = http.<span class="title function_">createServer</span>()</span><br><span class="line"><span class="comment">// 3.为服务器实例绑定 request，监听客户端请求</span></span><br><span class="line">server.<span class="title function_">on</span>(<span class="string">&#x27;request&#x27;</span>, <span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;&#125;)</span><br><span class="line">server.<span class="title function_">listen</span>(<span class="number">80</span>,<span class="keyword">function</span> (<span class="params"></span>) &#123;&#125;)</span><br></pre></td></tr></table></figure></div>
-<ul>
-<li><p>我们写的自定义模块，也可以被<code>require()</code>出来</p>
-</li>
-<li><p>在模块内定义的成员，无法在外面被访问，防止全局变量污染问题。</p>
-</li>
-<li><p>module可以向外共享模块作用域中的成员。</p>
-</li>
-<li><p>而在每个我们写的js文件中，都有一个module对象，它里面存储了和当前模块的信息。可以用代码打印：<br><code>console.log(module);</code></p>
-<ul>
-<li>在自定义模块内，使用 <strong>module.exports</strong> 对象，将模块内成员共享出去，给外界使用，默认在自定义模块化中， <em><strong>module.exports &#x3D; {}</strong></em></li>
-<li><em>外界</em> 用 <em><strong>require()</strong></em> 方法导入自定义模块时，得到的就是 <strong>module.exports</strong> 所指的对象。</li>
-</ul>
-</li>
-</ul>
-<h3 id="2-使用命令-npm-init-y-可以快速创建配置文件-package-json-，但要注意，上述命令只能在英文目录下运行，不能有中文或空格"><a href="#2-使用命令-npm-init-y-可以快速创建配置文件-package-json-，但要注意，上述命令只能在英文目录下运行，不能有中文或空格" class="headerlink" title="2.使用命令 npm init -y 可以快速创建配置文件 package.json ，但要注意，上述命令只能在英文目录下运行，不能有中文或空格"></a>2.使用命令 <code>npm init -y</code> 可以快速创建配置文件 <em><strong>package.json</strong></em> ，但要注意，上述命令只能在英文目录下运行，不能有中文或空格</h3><ul>
-<li><em><strong>package.json</strong></em> 配置文件，可用来记录项目中安装了哪些包。从而方便剔除 <em><strong>node_modules</strong></em> 目录之后，方便成员之间共享代码。</li>
-</ul>
-<h3 id="3-在-package-json-配置文件中，有一个-dependencies-节点，专门用来记录您使用-npm-install-命令安装了哪些包。"><a href="#3-在-package-json-配置文件中，有一个-dependencies-节点，专门用来记录您使用-npm-install-命令安装了哪些包。" class="headerlink" title="3.在 package.json 配置文件中，有一个 dependencies 节点，专门用来记录您使用 npm install 命令安装了哪些包。"></a>3.在 <em><strong>package.json</strong></em> 配置文件中，有一个 <code>dependencies</code> 节点，专门用来记录您使用 <strong>npm install</strong> 命令安装了哪些包。</h3><ul>
-<li><p>当我们下载别人的项目时，我们可以使用命令 <code>npm install</code> 来下载该项目所依赖的包，也就是 <strong>package.json</strong> 下的 <strong>dependencies</strong> 的节点所显示的包</p>
-</li>
-<li><p>卸载某个包，只要使用命令 <code>npm uninstall 包名</code></p>
-</li>
-</ul>
-<h3 id="4-devDependencies-节点-只在开发阶段用得到"><a href="#4-devDependencies-节点-只在开发阶段用得到" class="headerlink" title="4. devDependencies 节点:只在开发阶段用得到"></a>4. <em><strong>devDependencies</strong></em> 节点:只在开发阶段用得到</h3><ul>
-<li>如果某些包，<strong>只在项目开发阶段</strong>会用到，在<strong>项目上线之后不会用到</strong>，则建议把这些包记录到 <em><strong>devDependencies</strong></em>节点中。与之对应的，如果某些包在<strong>开发</strong>和<strong>项目上线之后</strong>都会用到，则建议把这些包记录到 <em>devDependencies</em>节点中。</li>
-<li>使用命令<code>npm i 包名 -D</code>意思就是说，将这个包记录到<em>devDependencies</em>节点中。上述命令<strong>等同于</strong> <code>npm install 包名 --save-dev</code></li>
-</ul>
-<h3 id="5-解决下载包速度慢的问题"><a href="#5-解决下载包速度慢的问题" class="headerlink" title="5.解决下载包速度慢的问题"></a>5.解决下载包速度慢的问题</h3><ul>
-<li>切换 <strong>npm</strong> 的下包镜像源</li>
-</ul>
-<div class="highlight-container" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 查看当前的下包镜像源</span></span><br><span class="line">npm config get registry</span><br><span class="line"><span class="comment">// 将下包的镜像源切换为淘宝镜像源</span></span><br><span class="line">npm config set registry=<span class="attr">http</span>:<span class="comment">//registry.npm.taobao.org/</span></span><br></pre></td></tr></table></figure></div>
-<ul>
-<li>当然，也可以使用快捷方式切换，但我们需要安装 <code>nrm</code><div class="highlight-container" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 安装 nrm</span></span><br><span class="line">npm i nrm -g</span><br><span class="line"><span class="comment">// 查看所有可用的镜像源</span></span><br><span class="line">nrm ls</span><br><span class="line"><span class="comment">// 将下包的镜像源切换为 taobao 镜像</span></span><br><span class="line">nrm use taobao</span><br></pre></td></tr></table></figure></div></li>
-</ul>
-<h3 id="6-包的分类"><a href="#6-包的分类" class="headerlink" title="6.包的分类"></a>6.包的分类</h3><h4 id="6-1-全局包"><a href="#6-1-全局包" class="headerlink" title="6.1 全局包"></a>6.1 全局包</h4><ol>
-<li>在执行 <code>npm install</code> 命令时，如果提供了 <code>-g</code>参数，则会把包安装为<strong>全局包</strong><div class="highlight-container" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 全局安装指定的包</span></span><br><span class="line">npm -i 包名 -g  </span><br><span class="line"><span class="comment">// 卸载全局安装的包</span></span><br><span class="line">npm uninstall 包名 -g</span><br></pre></td></tr></table></figure></div>
-<blockquote>
-<p>只有工具性质的包才有全局安装的必要性，以为他们提供好用的终端命令。</p>
-</blockquote>
-</li>
-</ol>
-<h4 id="6-2-i5ting-toc"><a href="#6-2-i5ting-toc" class="headerlink" title="6.2 i5ting_toc"></a>6.2 <code>i5ting_toc</code></h4><ol>
-<li><strong>i5ting_toc</strong> 是一个可以<strong>把md文档</strong>转换为 <strong>html</strong> 页面的小工具，使用步骤为：<div class="highlight-container" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 将i5ting_toc安装为全局包</span></span><br><span class="line">npm install -g i5ting_toc</span><br><span class="line"><span class="comment">// 调用 i5ting_toc ，轻松实现 md 转html </span></span><br><span class="line">i5ting_toc -f 要转换的md文件路径 -o</span><br></pre></td></tr></table></figure></div></li>
-</ol>
-<h3 id="7-包的规范"><a href="#7-包的规范" class="headerlink" title="7.包的规范"></a>7.包的规范</h3><ol>
-<li>一个规范的包，符合下面三点要求：</li>
-</ol>
-<ul>
-<li>包必须<strong>以单独的目录</strong>存在</li>
-<li>包的<strong>顶级目录下</strong>必须包含 <code>package.json</code> 这个包管理配置文件</li>
-<li>package.json 中必须包含 <code>name</code>,<code>version</code>,<code>main</code> 三个属性，分别是<code>包的名字</code>，<code>包的版本号</code>，<code>包的入口</code>。</li>
-</ul>
-<h3 id="8-设计一款自己的“包”"><a href="#8-设计一款自己的“包”" class="headerlink" title="8. 设计一款自己的“包”"></a>8. 设计一款自己的<code>“包”</code></h3><ul>
-<li>新建<code>包名</code>文件夹，作为包的<strong>根目录</strong></li>
-<li>在<code>包</code>文件夹中，新建三个文件：<ul>
-<li><strong>package.json</strong>（包管理配置文件）</li>
-<li><strong>index.js</strong>（包的入口文件）</li>
-<li><strong>README.md</strong>（包的说明文档）</li>
-</ul>
-</li>
-<li>建成包之后，可以上传至<code>npm</code>官网包管理服务器中。</li>
-</ul>
-]]></content>
       <categories>
         <category>Study</category>
       </categories>
@@ -347,29 +347,6 @@
       </tags>
   </entry>
   <entry>
-    <title>旅行篇</title>
-    <url>/2022/05/20/%E6%97%85%E8%A1%8C%E7%AF%87/</url>
-    <content><![CDATA[
-<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="80cc1b3243aa6b99946604dfd4b9cec1c2087f149adcf23314accbbdabdffcbe">a71c23e8d52ef79f22e66c480a300b080020cd25b604ba11dcb0379b5a3bf4f26964616b247cf0e4b0b47628b302e94e708392fb0af4ef9efcf9d04ab7c3cad3e1e6b853fd434637629e8bfa570d91a3eeab59117c0f53e652fdc377775e83b3c9037ad93fb71627e3f7445e83243a6b845c0be209eb1539a768a32b09cd49ea0f14260bff0169ec93887357ceb370701a4ddd4e6b187df8e0a286a13d527ccb84448f9577684183b69b0eba040bb0ad20d7c7ab9f938f2e26e4a7e6e95cf5cb5fc79457bf752c0a1a9a11bf2a3542554a3c4c00102833062eb9831d1a01f1a1de13359005a0f8571b083ab4fa404fae6efeefcb23286759caa58d0efe2bc739390debbec57dfd42da624121d3d421d9e590ec5804e39e69a72a9bc7da8326a0e2bbd0c90e13a6b952e04b290cac31c5c9907b8eea83da31c93fb6e685154a72cedfeb2795db17d53ae79e155968dbc2841b7570ab42b3557124d02a0f16591248259f3b4872b5acdb22056bc54cb617b42cb02dcb0b8a23ff991318dbb4307cb1f5bde95ba591c37ab5a82fb9d4ac6a6c5e14f68a0cff8c0a1c71c7e2713815ac63081c0e053975b057107dc78160291c33aa4e27596188d71e77e59c894caacd445f0d5e5bdfdf2b4d7955e033513e86c894132e63a9bed50d57d8942c098ee3c95401ec1944660ce41a6557cc94d6ede63ff8860b5305250733335acbba867a4a655ccff468b0024ea37ffbd3a56c9c332c2cd0843a47205d806101a60b6d3e87dacceb536a5bf28f83485dcdf977dbd87d365d8246566996f3bef2fe50e70137bee526e6f6426651500c79ea2994a7691a5026e46fa1e77603553ec32b95ad50b6a51531ee1c83f365e77977dce13beb7413a40161b02211601be3e72118df741c1742bc80d578d6a2e2624f30f2e9de662e154b85ab17bf09323934cbd0099fd4e21a218d6a07bfa9116cc43740d5b5b730b52e1cba31c029dfdfe5b5bdbf069faf76d5a7381ae4391f68f2eaeb64e7cfa04d3eadb2012a890c7cd6f15f3fc124e99c6793a8f7e8cbd0d21c65059a44e05a1919848010c6993b96ad6b1c59e45caaa1097d63a36e7dec3958d53841c2834cce21d7cf114edd105d2a89d58f5f9c31e41e5f8800c70b0f5e0b4aafe841d8f514281a1d37821fb862d3e49fa73b138c53742fd4b0a42e5936b6903b5bc2bcf2fa6da3da829dd3085dc2354836d4114176d6b45fbb7122ca328781fca26e9f39f98b86baeda78dc4b0fc2725481321042440452c47ec0daa24f3e171fd38929ea380b977c72fa0e4a579d3abdf2232646d0c4742c3a404781784beae89f3284dc34ab66b17cea1f54ed758ed048edc2550c2167a75b6909d0cc26667c3774d2cbe74150fbce0357e023a6f7739b98b676ccaf7f8fb08e157a7452a8814451003945a0a33fcb00fcc778c3664cf19480960782a414a61a0bc1b4a4ea341cad042c0c90c0a57440d443c52acb38544510ea6e136030bc42e96ad52c65d271f183534f3e95cf17a9cf440dea6ddd454949770eae72e6800e5a28a92e777cceba05615d0beb554d7670d654738a1879e1321a5abc0bd29d8345d20a2bb815e36c01ca37a340a6a95045a9f6341242f494256d2237b7fffeea423da08485ebbaa0f3a11b6890210f4853cd9ef81306840a9459a3b39627b44570fe2c7769ed654960dd9a313bd44952c6d33b9abbce7e1e3ac40ed70eb1bc7c5dfda67bd2e22a1d9f4dbfe5df3857904f0109f598620c58371affbb4516924bbc9430eb6086927f7d933cc88b2c8ac3cdf2236448cc2c6ff1f134cfaf4262f23619e0543b066652a9d88906330a458d3c7fb8b78980370ce9bcbde1a0330563bc62b4c2069413988cc8d89ac1d8c3b7e5eccbbd331bd5bdd044ac0282969aef52ff7a3928c53b781316b02964cb5f106df063d1d63f459ae82aa133dfa3b3f8caff474ae29140a565c1acd9d499c39570c8dce311d13dd7b1ffe4094059707b4ad6281f291ff0fcd4439ef2c4553753d2dce0e331d1385e02675d46288b26f7192df4c32a69b5bf54444e95f63dec9f866bd1b8dccb83c6282bffad6e0066096c966397b2beaac5d8521ef68d3dd15a0d1d5401da830f977719f08d6e6cef09f90ba6995a9062931bccb4d0d667c44cd2f47163765f6306041d833f74866301e2879c92c7b308189b484f14574cc1181e8b0040f9b9ee32816ed1ac67768e5b749a0196c52ec21a540fb480ec0d363169fcd507e5834d0109e68053c00edf1d6aecdb6e30c2f1f82b8e3a18b99eaae085c5544b8a59d27eace8bf0129e5f43d05cfc4f90c0c61de80e957f3a688261cdbfaed8d0a6159d5f0946a8345fe3612b393ed5e654859cf7f8f83772b154f2adcd015028a692c811965c6bc41e43f99da86bc05e67d4241554a32bab4dd5790aca1c28173e8c5cdf4ecf37a2c6861e7c3b5a61837735537022270d5613c04951512d2acdbfb489f5a39fb952ec720ada8d158518fbef5718c56954b67d41c47be378678b297bc2968fcc599fec06a0e8e790f0e7be84c9c22303916c435b14ae584b6ad0a5fda465fcc426c5bd9897062d839edb96ef60733ab8b2a2bd7ab2b72cfbf814fe16b13d25477cd38dd2b1feb849b803aec7356df556dd8b0c46ddaefb5dd88ef12c40e373994b7b8dfd11be764bb795e07447d4e2c9c85aca3075caf2d7ad6b4ee59583992ba5369f2c1eba5bc754166af09797cd2f4bebc360fe6afeabbf7e3e6b4f0703726891ef7a0822eea5f35f1b6bf133bfa8f514832c122b029eac8ec53e226d01fd69e6994d45ea8076b2b79c0761516b14d6e9d521be7376e17ef3e826ecbb1d275da8494e1689f7a1c68c96c4bb08d38e9059dfc6bf99f11073740ae8e1a872711c33076044f751b72fc794f8f677490db2545e751f4923ca1c97ffb17df1f222de783cd04e6e73be891da0a44f910c6764ccd82e0e3983808e2b262f42fb5eb70e73eee835cf2d998e60c81e4606e149fc66fd8c8b2cfdad4910c6f7acc765dc02c05cb89ada84ce18c7cd188989f8b93d420fab12409c50ead3476a39ce110fc5fdae14d9df503dfeccf5b4c46c99fe672f8f8617443feb1819f65a302f1fec50eb6522372ff94f7f9e2f61a551246a44aac116cc138454ae8ba39d6cafff6c965f4f9cfb2039c7b944b36bfca8938ce70988e9e670c74d2a3a3bbeba61c0b514f13bb51a27c690af210d4c2a6130aadb5544e2198dd4099dab02ae92af969dd54a261ea2e886cabca20bc7aaa29f649f95b6fdada20817246d591179520a30d6eff8539eb7b53dd8da490a8397e52451b692c19d81255820499a328c097d57b5df026e49d5ab20371b8a55b14c40083ff820e21f39b5503110e4aa141381e32cd7cd7042a39f8318635c8b29b0b75dc51c42b7b2590aa005d36fc207d1957047ee7485d1b6a61685afd247908317d0b040ff2000da52afec501846dfc7ca03b70c793c449c493375792758ffce30029c9bcf359dad838e351b1efeea637c15962f21b1a15b5fb126fcedb89a834dd6d63d8d36d10053632806361ec05d0e95a3b1855d433eb84a3731810d444d4fd4a1f4a49e778ae82b5ede6298c6ae39952e7f1c3428ba19e1fa7fe489d5a4b24e5b20472f3ccac8aeab7f6f7eefb00be6b2df503b8365fef7b2686185697d209461d8504957c697c4b4404c8fa1fe33cbd7a04ed31037ab7fa3a88c688147406e6c4bda8027371e1c8e6385839a0283f7ffeb16618b33bd00d71701305c27299f13f02d33a523ed7b2ef34be86d8ac3a3a0af3b4cb07bfee9b59a77a40c90354e9a1cae2b3ab8bb0db98a270b078cc7f242c298764d036592c3e39bae992316455248bd01396d152524824a3c864f793d511663720d33b3eebab05405e6bb6e9a43a400c39fb121ec271d37ff78598b957c085ed6954d8e34566f59a01bce37524e9245b2ca7dbbd25a0ac67ba3ea67f2e2446cca5a97c6602229dd8d8584f768600bc5b9d6220f83900cf480282a9c305ff82e541cac057c393c5c5d7668bfdbcb2bbaaaa01dc129956861d52f3c88a9607e761f1802e88394a508c80bd203d58f5af67a43c904d857cd0953500371bd27e7283d665322b8b5626f984f19dc32674d33a50f9881290e1b5ed8d529a6e87b6ea79f5b992bf99b2bfc489bb1ff07642d522bca0ea760343f0ef43c69534592ee6ddde547789d2aa72f065a61bea281b1b60f4c9f6f45b9ceeeb88758436161516d156f02f472a9e9d512c47852ccc324df4fa27cff8b88354598265e3c1047b0babd0f25eff206d249cc1f8923a62e43cb45643ae4608dea5838c22cb611f8c836c22fbca637874c4d3009911a2db782c39b8e4accca18a587559b98e100d68e39dc800111229ebb8c040d6cafe6852dcd4c2128bc11fbb63b48d58d91783c856ba27bc2ec4c4be2c366654a290408cfe6a7aec15ae4c673e5350ca5fff3c3a9e4f619bb99dc58fccf3f0a2a602303d754739e2bd45b33b833946ec0d70364f71c66e555e5567449d3e908ad39c1556f7779e061e026237d3eef31a9273c840e09bfc27e20388aee1d0065fd9cca01efca0175753ec1024ada0c493b6eb753fd1230e147d3af221bb825c88f4e8ffbed22dee9a9d19bcfd21157a6f685314ec3baa7c3326191b90fb873be78d637351a674fdafed25f447214b50cd5e56498e67e6d0344208424b766de96d908cf254593211be8bf00011c8699c1058ce75569e001b01d4833761f2e8bfbcd959fcf576c7cff29f9c42b54e4195aa1c9c79d052dbad6325ae29138a21c5f0cd72954a85cbb47e2b6187d4d8eed8b80b7c53b8e71cd56902f9625d0dd817613ea332a802206c1566ec57e379b113498d490e60072058164747b859e6e34f76dfe3afec33a28ac9202e05c2288632177f7619064db2820ebaa0738172a</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">您好, 这里需要密码.</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-swup-reload-script src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      <categories>
-        <category>Play</category>
-      </categories>
-      <tags>
-        <tag>旅行</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>学习篇—电子电工技术</title>
     <url>/2023/07/25/%E5%AD%A6%E4%B9%A0%E7%AF%87%E2%80%94%E7%94%B5%E5%AD%90%E7%94%B5%E5%B7%A5%E6%8A%80%E6%9C%AF/</url>
     <content><![CDATA[<h2 id="中国工程院发布“中国电子信息工程科技发展十三大挑战（2022）”"><a href="#中国工程院发布“中国电子信息工程科技发展十三大挑战（2022）”" class="headerlink" title="中国工程院发布“中国电子信息工程科技发展十三大挑战（2022）”"></a><a class="link"   href="https://www.nsfc.gov.cn/csc/20340/20289/59515/index.html" >中国工程院发布“中国电子信息工程科技发展十三大挑战（2022） <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>”</h2><p><strong>日期：2022年02月18日 来源：中国科学报</strong></p>
@@ -395,6 +372,29 @@
       </categories>
       <tags>
         <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>旅行篇</title>
+    <url>/2022/05/20/%E6%97%85%E8%A1%8C%E7%AF%87/</url>
+    <content><![CDATA[
+<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="80cc1b3243aa6b99946604dfd4b9cec1c2087f149adcf23314accbbdabdffcbe">a71c23e8d52ef79f22e66c480a300b080020cd25b604ba11dcb0379b5a3bf4f26964616b247cf0e4b0b47628b302e94e708392fb0af4ef9efcf9d04ab7c3cad3e1e6b853fd434637629e8bfa570d91a3eeab59117c0f53e652fdc377775e83b3c9037ad93fb71627e3f7445e83243a6b845c0be209eb1539a768a32b09cd49ea0f14260bff0169ec93887357ceb370701a4ddd4e6b187df8e0a286a13d527ccb84448f9577684183b69b0eba040bb0ad20d7c7ab9f938f2e26e4a7e6e95cf5cb5fc79457bf752c0a1a9a11bf2a3542554a3c4c00102833062eb9831d1a01f1a1de13359005a0f8571b083ab4fa404fae6efeefcb23286759caa58d0efe2bc739390debbec57dfd42da624121d3d421d9e590ec5804e39e69a72a9bc7da8326a0e2bbd0c90e13a6b952e04b290cac31c5c9907b8eea83da31c93fb6e685154a72cedfeb2795db17d53ae79e155968dbc2841b7570ab42b3557124d02a0f16591248259f3b4872b5acdb22056bc54cb617b42cb02dcb0b8a23ff991318dbb4307cb1f5bde95ba591c37ab5a82fb9d4ac6a6c5e14f68a0cff8c0a1c71c7e2713815ac63081c0e053975b057107dc78160291c33aa4e27596188d71e77e59c894caacd445f0d5e5bdfdf2b4d7955e033513e86c894132e63a9bed50d57d8942c098ee3c95401ec1944660ce41a6557cc94d6ede63ff8860b5305250733335acbba867a4a655ccff468b0024ea37ffbd3a56c9c332c2cd0843a47205d806101a60b6d3e87dacceb536a5bf28f83485dcdf977dbd87d365d8246566996f3bef2fe50e70137bee526e6f6426651500c79ea2994a7691a5026e46fa1e77603553ec32b95ad50b6a51531ee1c83f365e77977dce13beb7413a40161b02211601be3e72118df741c1742bc80d578d6a2e2624f30f2e9de662e154b85ab17bf09323934cbd0099fd4e21a218d6a07bfa9116cc43740d5b5b730b52e1cba31c029dfdfe5b5bdbf069faf76d5a7381ae4391f68f2eaeb64e7cfa04d3eadb2012a890c7cd6f15f3fc124e99c6793a8f7e8cbd0d21c65059a44e05a1919848010c6993b96ad6b1c59e45caaa1097d63a36e7dec3958d53841c2834cce21d7cf114edd105d2a89d58f5f9c31e41e5f8800c70b0f5e0b4aafe841d8f514281a1d37821fb862d3e49fa73b138c53742fd4b0a42e5936b6903b5bc2bcf2fa6da3da829dd3085dc2354836d4114176d6b45fbb7122ca328781fca26e9f39f98b86baeda78dc4b0fc2725481321042440452c47ec0daa24f3e171fd38929ea380b977c72fa0e4a579d3abdf2232646d0c4742c3a404781784beae89f3284dc34ab66b17cea1f54ed758ed048edc2550c2167a75b6909d0cc26667c3774d2cbe74150fbce0357e023a6f7739b98b676ccaf7f8fb08e157a7452a8814451003945a0a33fcb00fcc778c3664cf19480960782a414a61a0bc1b4a4ea341cad042c0c90c0a57440d443c52acb38544510ea6e136030bc42e96ad52c65d271f183534f3e95cf17a9cf440dea6ddd454949770eae72e6800e5a28a92e777cceba05615d0beb554d7670d654738a1879e1321a5abc0bd29d8345d20a2bb815e36c01ca37a340a6a95045a9f6341242f494256d2237b7fffeea423da08485ebbaa0f3a11b6890210f4853cd9ef81306840a9459a3b39627b44570fe2c7769ed654960dd9a313bd44952c6d33b9abbce7e1e3ac40ed70eb1bc7c5dfda67bd2e22a1d9f4dbfe5df3857904f0109f598620c58371affbb4516924bbc9430eb6086927f7d933cc88b2c8ac3cdf2236448cc2c6ff1f134cfaf4262f23619e0543b066652a9d88906330a458d3c7fb8b78980370ce9bcbde1a0330563bc62b4c2069413988cc8d89ac1d8c3b7e5eccbbd331bd5bdd044ac0282969aef52ff7a3928c53b781316b02964cb5f106df063d1d63f459ae82aa133dfa3b3f8caff474ae29140a565c1acd9d499c39570c8dce311d13dd7b1ffe4094059707b4ad6281f291ff0fcd4439ef2c4553753d2dce0e331d1385e02675d46288b26f7192df4c32a69b5bf54444e95f63dec9f866bd1b8dccb83c6282bffad6e0066096c966397b2beaac5d8521ef68d3dd15a0d1d5401da830f977719f08d6e6cef09f90ba6995a9062931bccb4d0d667c44cd2f47163765f6306041d833f74866301e2879c92c7b308189b484f14574cc1181e8b0040f9b9ee32816ed1ac67768e5b749a0196c52ec21a540fb480ec0d363169fcd507e5834d0109e68053c00edf1d6aecdb6e30c2f1f82b8e3a18b99eaae085c5544b8a59d27eace8bf0129e5f43d05cfc4f90c0c61de80e957f3a688261cdbfaed8d0a6159d5f0946a8345fe3612b393ed5e654859cf7f8f83772b154f2adcd015028a692c811965c6bc41e43f99da86bc05e67d4241554a32bab4dd5790aca1c28173e8c5cdf4ecf37a2c6861e7c3b5a61837735537022270d5613c04951512d2acdbfb489f5a39fb952ec720ada8d158518fbef5718c56954b67d41c47be378678b297bc2968fcc599fec06a0e8e790f0e7be84c9c22303916c435b14ae584b6ad0a5fda465fcc426c5bd9897062d839edb96ef60733ab8b2a2bd7ab2b72cfbf814fe16b13d25477cd38dd2b1feb849b803aec7356df556dd8b0c46ddaefb5dd88ef12c40e373994b7b8dfd11be764bb795e07447d4e2c9c85aca3075caf2d7ad6b4ee59583992ba5369f2c1eba5bc754166af09797cd2f4bebc360fe6afeabbf7e3e6b4f0703726891ef7a0822eea5f35f1b6bf133bfa8f514832c122b029eac8ec53e226d01fd69e6994d45ea8076b2b79c0761516b14d6e9d521be7376e17ef3e826ecbb1d275da8494e1689f7a1c68c96c4bb08d38e9059dfc6bf99f11073740ae8e1a872711c33076044f751b72fc794f8f677490db2545e751f4923ca1c97ffb17df1f222de783cd04e6e73be891da0a44f910c6764ccd82e0e3983808e2b262f42fb5eb70e73eee835cf2d998e60c81e4606e149fc66fd8c8b2cfdad4910c6f7acc765dc02c05cb89ada84ce18c7cd188989f8b93d420fab12409c50ead3476a39ce110fc5fdae14d9df503dfeccf5b4c46c99fe672f8f8617443feb1819f65a302f1fec50eb6522372ff94f7f9e2f61a551246a44aac116cc138454ae8ba39d6cafff6c965f4f9cfb2039c7b944b36bfca8938ce70988e9e670c74d2a3a3bbeba61c0b514f13bb51a27c690af210d4c2a6130aadb5544e2198dd4099dab02ae92af969dd54a261ea2e886cabca20bc7aaa29f649f95b6fdada20817246d591179520a30d6eff8539eb7b53dd8da490a8397e52451b692c19d81255820499a328c097d57b5df026e49d5ab20371b8a55b14c40083ff820e21f39b5503110e4aa141381e32cd7cd7042a39f8318635c8b29b0b75dc51c42b7b2590aa005d36fc207d1957047ee7485d1b6a61685afd247908317d0b040ff2000da52afec501846dfc7ca03b70c793c449c493375792758ffce30029c9bcf359dad838e351b1efeea637c15962f21b1a15b5fb126fcedb89a834dd6d63d8d36d10053632806361ec05d0e95a3b1855d433eb84a3731810d444d4fd4a1f4a49e778ae82b5ede6298c6ae39952e7f1c3428ba19e1fa7fe489d5a4b24e5b20472f3ccac8aeab7f6f7eefb00be6b2df503b8365fef7b2686185697d209461d8504957c697c4b4404c8fa1fe33cbd7a04ed31037ab7fa3a88c688147406e6c4bda8027371e1c8e6385839a0283f7ffeb16618b33bd00d71701305c27299f13f02d33a523ed7b2ef34be86d8ac3a3a0af3b4cb07bfee9b59a77a40c90354e9a1cae2b3ab8bb0db98a270b078cc7f242c298764d036592c3e39bae992316455248bd01396d152524824a3c864f793d511663720d33b3eebab05405e6bb6e9a43a400c39fb121ec271d37ff78598b957c085ed6954d8e34566f59a01bce37524e9245b2ca7dbbd25a0ac67ba3ea67f2e2446cca5a97c6602229dd8d8584f768600bc5b9d6220f83900cf480282a9c305ff82e541cac057c393c5c5d7668bfdbcb2bbaaaa01dc129956861d52f3c88a9607e761f1802e88394a508c80bd203d58f5af67a43c904d857cd0953500371bd27e7283d665322b8b5626f984f19dc32674d33a50f9881290e1b5ed8d529a6e87b6ea79f5b992bf99b2bfc489bb1ff07642d522bca0ea760343f0ef43c69534592ee6ddde547789d2aa72f065a61bea281b1b60f4c9f6f45b9ceeeb88758436161516d156f02f472a9e9d512c47852ccc324df4fa27cff8b88354598265e3c1047b0babd0f25eff206d249cc1f8923a62e43cb45643ae4608dea5838c22cb611f8c836c22fbca637874c4d3009911a2db782c39b8e4accca18a587559b98e100d68e39dc800111229ebb8c040d6cafe6852dcd4c2128bc11fbb63b48d58d91783c856ba27bc2ec4c4be2c366654a290408cfe6a7aec15ae4c673e5350ca5fff3c3a9e4f619bb99dc58fccf3f0a2a602303d754739e2bd45b33b833946ec0d70364f71c66e555e5567449d3e908ad39c1556f7779e061e026237d3eef31a9273c840e09bfc27e20388aee1d0065fd9cca01efca0175753ec1024ada0c493b6eb753fd1230e147d3af221bb825c88f4e8ffbed22dee9a9d19bcfd21157a6f685314ec3baa7c3326191b90fb873be78d637351a674fdafed25f447214b50cd5e56498e67e6d0344208424b766de96d908cf254593211be8bf00011c8699c1058ce75569e001b01d4833761f2e8bfbcd959fcf576c7cff29f9c42b54e4195aa1c9c79d052dbad6325ae29138a21c5f0cd72954a85cbb47e2b6187d4d8eed8b80b7c53b8e71cd56902f9625d0dd817613ea332a802206c1566ec57e379b113498d490e60072058164747b859e6e34f76dfe3afec33a28ac9202e05c2288632177f7619064db2820ebaa0738172a</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">您好, 这里需要密码.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-swup-reload-script src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>Play</category>
+      </categories>
+      <tags>
+        <tag>旅行</tag>
       </tags>
   </entry>
   <entry>

@@ -590,13 +590,14 @@
             
     <div id="waline"></div>
     <script type="module" data-swup-reload-script>
+      const params = new URLSearchParams(location.search.slice(1));
       import { init } from '/js/libs/waline.mjs';
 
       function loadWaline() {
         init({
           el: '#waline',
           serverURL: 'https://ycomet.love/',
-          lang: 'zh-CN',
+          lang: params.get('zh-CN'),
           dark: 'body[class~="dark-mode"]',
           requiredMeta: ['nick', 'mail']
         });
@@ -607,6 +608,7 @@
       } else {
         window.addEventListener('DOMContentLoaded', loadWaline);
       }
+      window.addEventListener('onload', loadWaline);
     </script>
 
 
