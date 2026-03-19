@@ -553,9 +553,9 @@
       </tags>
   </entry>
   <entry>
-    <title>一个普通开发者的“技术焦虑自救指南””</title>
+    <title>🚀 2025 技术趋势观察：一个普通开发者的“技术焦虑自救指南””</title>
     <url>/2025/12/18/%E4%B8%80%E4%B8%AA%E6%99%AE%E9%80%9A%E5%BC%80%E5%8F%91%E8%80%85%E7%9A%84%E2%80%9C%E6%8A%80%E6%9C%AF%E7%84%A6%E8%99%91%E8%87%AA%E6%95%91%E6%8C%87%E5%8D%97%E2%80%9D%E2%80%9D/</url>
-    <content><![CDATA[<h1 id="🚀-2025-技术趋势观察：一个普通开发者的“技术焦虑自救指南”"><a href="#🚀-2025-技术趋势观察：一个普通开发者的“技术焦虑自救指南”" class="headerlink" title="🚀 2025 技术趋势观察：一个普通开发者的“技术焦虑自救指南”"></a>🚀 2025 技术趋势观察：一个普通开发者的“技术焦虑自救指南”</h1><blockquote>
+    <content><![CDATA[<blockquote>
 <p>最近一段时间，我有点焦虑。</p>
 <p>不是没活干，而是——<br>👉 <strong>技术变化太快了。</strong></p>
 </blockquote>
@@ -738,7 +738,7 @@
   <entry>
     <title>🚗 从手机 App 到车载系统：一个 Android 开发者的“转向尝试”</title>
     <url>/2026/03/18/%F0%9F%9A%97-%E4%BB%8E%E6%89%8B%E6%9C%BA-App-%E5%88%B0%E8%BD%A6%E8%BD%BD%E7%B3%BB%E7%BB%9F%EF%BC%9A%E4%B8%80%E4%B8%AA-Android-%E5%BC%80%E5%8F%91%E8%80%85%E7%9A%84%E2%80%9C%E8%BD%AC%E5%90%91%E5%B0%9D%E8%AF%95%E2%80%9D/</url>
-    <content><![CDATA[<h1 id="🚗-从手机-App-到车载系统：一个-Android-开发者的“转向尝试”（2026-实践记录）"><a href="#🚗-从手机-App-到车载系统：一个-Android-开发者的“转向尝试”（2026-实践记录）" class="headerlink" title="🚗 从手机 App 到车载系统：一个 Android 开发者的“转向尝试”（2026 实践记录）"></a>🚗 从手机 App 到车载系统：一个 Android 开发者的“转向尝试”（2026 实践记录）</h1><blockquote>
+    <content><![CDATA[<blockquote>
 <p>最近在准备一些新的方向，发现一个挺有意思的赛道：车载 Android（IVI）。<br>于是我做了一个小 Demo，也踩了一些坑，这篇就当是一次“转向记录”。</p>
 </blockquote>
 <hr>
@@ -921,7 +921,7 @@
   <entry>
     <title>🤖 你问 AI 一句话，背后到底发生了什么？一次对话背后的完整技术链路</title>
     <url>/2025/04/10/%F0%9F%A4%96-%E4%BD%A0%E9%97%AE-AI-%E4%B8%80%E5%8F%A5%E8%AF%9D%EF%BC%8C%E8%83%8C%E5%90%8E%E5%88%B0%E5%BA%95%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88%EF%BC%9F%E4%B8%80%E6%AC%A1%E5%AF%B9%E8%AF%9D%E8%83%8C%E5%90%8E%E7%9A%84%E5%AE%8C%E6%95%B4%E6%8A%80%E6%9C%AF%E9%93%BE%E8%B7%AF/</url>
-    <content><![CDATA[<h1 id="🤖-你问-AI-一句话，背后到底发生了什么？一次对话背后的完整技术链路（2026-深度拆解）"><a href="#🤖-你问-AI-一句话，背后到底发生了什么？一次对话背后的完整技术链路（2026-深度拆解）" class="headerlink" title="🤖 你问 AI 一句话，背后到底发生了什么？一次对话背后的完整技术链路（2026 深度拆解）"></a>🤖 你问 AI 一句话，背后到底发生了什么？一次对话背后的完整技术链路（2026 深度拆解）</h1><blockquote>
+    <content><![CDATA[<blockquote>
 <p>“帮我写一段代码”<br>“解释一下 Handler 机制”</p>
 <p>看起来只是输入一句话，几秒后 AI 就给出了答案。</p>
 <p>但我最近在想一个问题：</p>
@@ -1084,6 +1084,395 @@
 <hr>
 <p>如果这篇对你有启发，说明我这次“拆解”是成功的 😄<br>后面准备再写一篇：</p>
 <p>👉 《AI 写代码到底靠谱吗？一次真实对比测试》</p>
+]]></content>
+      <tags>
+        <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>为什么现在越来越多公司开始强调“工程能力”？</title>
+    <url>/2025/06/22/%E4%B8%BA%E4%BB%80%E4%B9%88%E7%8E%B0%E5%9C%A8%E8%B6%8A%E6%9D%A5%E8%B6%8A%E5%A4%9A%E5%85%AC%E5%8F%B8%E5%BC%80%E5%A7%8B%E5%BC%BA%E8%B0%83%E2%80%9C%E5%B7%A5%E7%A8%8B%E8%83%BD%E5%8A%9B%E2%80%9D%EF%BC%9F/</url>
+    <content><![CDATA[<h1 id="⚡-为什么现在越来越多公司开始强调“工程能力”？（一个开发者的真实感受）"><a href="#⚡-为什么现在越来越多公司开始强调“工程能力”？（一个开发者的真实感受）" class="headerlink" title="⚡ 为什么现在越来越多公司开始强调“工程能力”？（一个开发者的真实感受）"></a>⚡ 为什么现在越来越多公司开始强调“工程能力”？（一个开发者的真实感受）</h1><blockquote>
+<p>以前面试：</p>
+<p>“会不会写代码？”</p>
+<p>现在面试：</p>
+<p>“你怎么设计系统？”</p>
+</blockquote>
+<p>我一开始很不理解：</p>
+<p>👉 我不是写代码的吗？</p>
+<p>后来才慢慢发现：</p>
+<blockquote>
+<p><strong>代码只是结果，工程能力才是核心。</strong></p>
+</blockquote>
+<hr>
+<h2 id="一、什么是“工程能力”？（说人话版）"><a href="#一、什么是“工程能力”？（说人话版）" class="headerlink" title="一、什么是“工程能力”？（说人话版）"></a>一、什么是“工程能力”？（说人话版）</h2><p>不是：</p>
+<p>❌ 会不会写 for 循环</p>
+<p>而是：</p>
+<p>👉 <strong>能不能把一个复杂问题拆清楚 + 做稳定</strong></p>
+<hr>
+<h2 id="二、为什么现在越来越看重这个？"><a href="#二、为什么现在越来越看重这个？" class="headerlink" title="二、为什么现在越来越看重这个？"></a>二、为什么现在越来越看重这个？</h2><hr>
+<h3 id="1️⃣-业务复杂了"><a href="#1️⃣-业务复杂了" class="headerlink" title="1️⃣ 业务复杂了"></a>1️⃣ 业务复杂了</h3><ul>
+<li>多模块</li>
+<li>多端</li>
+<li>多人协作</li>
+</ul>
+<p>👉 已经不是“一个人写完”的时代了</p>
+<hr>
+<h3 id="2️⃣-系统越来越大"><a href="#2️⃣-系统越来越大" class="headerlink" title="2️⃣ 系统越来越大"></a>2️⃣ 系统越来越大</h3><ul>
+<li>微服务</li>
+<li>分布式</li>
+<li>云原生</li>
+</ul>
+<p>👉 错一点，可能全崩</p>
+<hr>
+<h3 id="3️⃣-AI在替代“基础编码”"><a href="#3️⃣-AI在替代“基础编码”" class="headerlink" title="3️⃣ AI在替代“基础编码”"></a>3️⃣ AI在替代“基础编码”</h3><p>👉 所以：</p>
+<blockquote>
+<p><strong>人要往更高层走</strong></p>
+</blockquote>
+<hr>
+<h2 id="三、我踩过的坑（真实）"><a href="#三、我踩过的坑（真实）" class="headerlink" title="三、我踩过的坑（真实）"></a>三、我踩过的坑（真实）</h2><hr>
+<h3 id="❌-坑1：代码能跑就行"><a href="#❌-坑1：代码能跑就行" class="headerlink" title="❌ 坑1：代码能跑就行"></a>❌ 坑1：代码能跑就行</h3><p>👉 后果：</p>
+<ul>
+<li>维护困难</li>
+<li>改一处炸三处</li>
+</ul>
+<hr>
+<h3 id="❌-坑2：没有设计"><a href="#❌-坑2：没有设计" class="headerlink" title="❌ 坑2：没有设计"></a>❌ 坑2：没有设计</h3><p>👉 后果：</p>
+<ul>
+<li>重复代码</li>
+<li>逻辑混乱</li>
+</ul>
+<hr>
+<h3 id="❌-坑3：忽略性能"><a href="#❌-坑3：忽略性能" class="headerlink" title="❌ 坑3：忽略性能"></a>❌ 坑3：忽略性能</h3><p>👉 后果：</p>
+<ul>
+<li>卡顿</li>
+<li>ANR</li>
+</ul>
+<hr>
+<h2 id="四、工程能力的核心是什么？"><a href="#四、工程能力的核心是什么？" class="headerlink" title="四、工程能力的核心是什么？"></a>四、工程能力的核心是什么？</h2><p>我总结成3点：</p>
+<hr>
+<h3 id="🧠-1-抽象能力"><a href="#🧠-1-抽象能力" class="headerlink" title="🧠 1. 抽象能力"></a>🧠 1. 抽象能力</h3><p>👉 能不能把复杂问题变简单</p>
+<hr>
+<h3 id="🧩-2-设计能力"><a href="#🧩-2-设计能力" class="headerlink" title="🧩 2. 设计能力"></a>🧩 2. 设计能力</h3><p>👉 模块怎么拆？谁负责什么？</p>
+<hr>
+<h3 id="⚙️-3-稳定性意识"><a href="#⚙️-3-稳定性意识" class="headerlink" title="⚙️ 3. 稳定性意识"></a>⚙️ 3. 稳定性意识</h3><p>👉 出问题怎么办？</p>
+<hr>
+<h2 id="五、我现在的提升方式"><a href="#五、我现在的提升方式" class="headerlink" title="五、我现在的提升方式"></a>五、我现在的提升方式</h2><hr>
+<h3 id="✅-1-写项目时强制分层"><a href="#✅-1-写项目时强制分层" class="headerlink" title="✅ 1. 写项目时强制分层"></a>✅ 1. 写项目时强制分层</h3><hr>
+<h3 id="✅-2-多做“重构”"><a href="#✅-2-多做“重构”" class="headerlink" title="✅ 2. 多做“重构”"></a>✅ 2. 多做“重构”</h3><p>👉 重构比写代码更能提升能力</p>
+<hr>
+<h3 id="✅-3-写技术总结（比如这篇）"><a href="#✅-3-写技术总结（比如这篇）" class="headerlink" title="✅ 3. 写技术总结（比如这篇）"></a>✅ 3. 写技术总结（比如这篇）</h3><p>👉 输出倒逼输入</p>
+<hr>
+<h2 id="六、最后一句话"><a href="#六、最后一句话" class="headerlink" title="六、最后一句话"></a>六、最后一句话</h2><p>如果说：</p>
+<p>👉 初级工程师拼“会不会写代码”</p>
+<p>那中级往上拼的是：</p>
+<blockquote>
+<p>👉 <strong>“你能不能把事情做好”</strong></p>
+</blockquote>
+<hr>
+<h2 id="🔚"><a href="#🔚" class="headerlink" title="🔚"></a>🔚</h2><p>我现在也还在这个阶段慢慢爬，但至少方向清晰了。</p>
+<p>希望你也是 😄</p>
+]]></content>
+      <tags>
+        <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>测试工具开发—记录vlog😉</title>
+    <url>/2026/03/19/%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7%E5%BC%80%E5%8F%91%E2%80%94%E8%AE%B0%E5%BD%95vlog%F0%9F%98%89/</url>
+    <content><![CDATA[<h1 id="🚀-一、先搞清楚：测试工具开发是干嘛的？"><a href="#🚀-一、先搞清楚：测试工具开发是干嘛的？" class="headerlink" title="🚀 一、先搞清楚：测试工具开发是干嘛的？"></a>🚀 一、先搞清楚：测试工具开发是干嘛的？</h1><p>简单说一句人话：</p>
+<blockquote>
+<p>👉 不是做 App 给用户用，而是做工具给“开发 &#x2F; 测试人员用”</p>
+</blockquote>
+<p>常见场景比如：</p>
+<ul>
+<li>一键切换环境（测试 &#x2F; 生产）</li>
+<li>查看接口请求日志</li>
+<li>模拟接口返回数据</li>
+<li>自动点击 &#x2F; 自动化测试</li>
+<li>抓包 &#x2F; WebSocket 调试</li>
+<li>崩溃日志收集</li>
+</ul>
+<hr>
+<h1 id="🧠-二、记录要做的第一个工具"><a href="#🧠-二、记录要做的第一个工具" class="headerlink" title="🧠 二、记录要做的第一个工具"></a>🧠 二、记录要做的第一个工具</h1><h2 id="✅【接口调试工具-App】（类似-Postman-的简化版）"><a href="#✅【接口调试工具-App】（类似-Postman-的简化版）" class="headerlink" title="✅【接口调试工具 App】（类似 Postman 的简化版）"></a>✅【接口调试工具 App】（类似 Postman 的简化版）</h2><p>功能非常简单：</p>
+<ul>
+<li>输入 URL</li>
+<li>选择 GET &#x2F; POST</li>
+<li>点击发送请求</li>
+<li>展示返回结果</li>
+</ul>
+<p>👉 这个东西实用性强，因为：</p>
+<ul>
+<li>涉及网络请求</li>
+<li>UI</li>
+<li>JSON处理</li>
+</ul>
+<h1 id="🛠-三、一步一步来叭"><a href="#🛠-三、一步一步来叭" class="headerlink" title="🛠 三、一步一步来叭"></a>🛠 三、一步一步来叭</h1><h2 id="🧱-1-UI-布局（很简单）"><a href="#🧱-1-UI-布局（很简单）" class="headerlink" title="🧱 1. UI 布局（很简单）"></a>🧱 1. UI 布局（很简单）</h2><div class="highlight-container" data-rel="Xml"><figure class="iseeu highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- activity_main.xml --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">LinearLayout</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:orientation</span>=<span class="string">&quot;vertical&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:padding</span>=<span class="string">&quot;16dp&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">&quot;match_parent&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">EditText</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:id</span>=<span class="string">&quot;@+id/etUrl&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:hint</span>=<span class="string">&quot;请输入请求URL&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">Button</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:id</span>=<span class="string">&quot;@+id/btnGet&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:text</span>=<span class="string">&quot;GET请求&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">TextView</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:id</span>=<span class="string">&quot;@+id/tvResult&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:text</span>=<span class="string">&quot;返回结果&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_height</span>=<span class="string">&quot;wrap_content&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<h2 id="⚙️-2-添加网络库（推荐-OkHttp）"><a href="#⚙️-2-添加网络库（推荐-OkHttp）" class="headerlink" title="⚙️ 2. 添加网络库（推荐 OkHttp）"></a>⚙️ 2. 添加网络库（推荐 OkHttp）</h2><div class="highlight-container" data-rel="Gradle"><figure class="iseeu highlight gradle"><table><tr><td class="code"><pre><span class="line">implementation <span class="string">&#x27;com.squareup.okhttp3:okhttp:4.9.3&#x27;</span></span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<h2 id="💻-3-核心代码（MainActivity）"><a href="#💻-3-核心代码（MainActivity）" class="headerlink" title="💻 3. 核心代码（MainActivity）"></a>💻 3. 核心代码（MainActivity）</h2><div class="highlight-container" data-rel="Kotlin"><figure class="iseeu highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MainActivity</span> : <span class="type">AppCompatActivity</span>() &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">lateinit</span> <span class="keyword">var</span> etUrl: EditText</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">lateinit</span> <span class="keyword">var</span> btnGet: Button</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">lateinit</span> <span class="keyword">var</span> tvResult: TextView</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">val</span> client = OkHttpClient()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onCreate</span><span class="params">(savedInstanceState: <span class="type">Bundle</span>?)</span></span> &#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState)</span><br><span class="line">        setContentView(R.layout.activity_main)</span><br><span class="line"></span><br><span class="line">        etUrl = findViewById(R.id.etUrl)</span><br><span class="line">        btnGet = findViewById(R.id.btnGet)</span><br><span class="line">        tvResult = findViewById(R.id.tvResult)</span><br><span class="line"></span><br><span class="line">        btnGet.setOnClickListener &#123;</span><br><span class="line">            <span class="keyword">val</span> url = etUrl.text.toString()</span><br><span class="line">            sendGetRequest(url)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="function"><span class="keyword">fun</span> <span class="title">sendGetRequest</span><span class="params">(url: <span class="type">String</span>)</span></span> &#123;</span><br><span class="line">        <span class="keyword">val</span> request = Request.Builder()</span><br><span class="line">            .url(url)</span><br><span class="line">            .build()</span><br><span class="line"></span><br><span class="line">        Thread &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                <span class="keyword">val</span> response = client.newCall(request).execute()</span><br><span class="line">                <span class="keyword">val</span> result = response.body?.string()</span><br><span class="line"></span><br><span class="line">                runOnUiThread &#123;</span><br><span class="line">                    tvResult.text = result</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; <span class="keyword">catch</span> (e: Exception) &#123;</span><br><span class="line">                runOnUiThread &#123;</span><br><span class="line">                    tvResult.text = <span class="string">&quot;请求失败: <span class="subst">$&#123;e.message&#125;</span>&quot;</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;.start()</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<h1 id="🔥-四、可以继续加的功能"><a href="#🔥-四、可以继续加的功能" class="headerlink" title="🔥 四、可以继续加的功能"></a>🔥 四、可以继续加的功能</h1><h2 id="⭐-1-加-POST-请求"><a href="#⭐-1-加-POST-请求" class="headerlink" title="⭐ 1. 加 POST 请求"></a>⭐ 1. 加 POST 请求</h2><div class="highlight-container" data-rel="Kotlin"><figure class="iseeu highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> body = RequestBody.create(</span><br><span class="line">    <span class="string">&quot;application/json&quot;</span>.toMediaType(),</span><br><span class="line">    jsonString</span><br><span class="line">)</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<h2 id="⭐-2-JSON-格式化"><a href="#⭐-2-JSON-格式化" class="headerlink" title="⭐ 2. JSON 格式化"></a>⭐ 2. JSON 格式化</h2><p>👉 返回结果太乱 → 所以要优化展示，可以用：</p>
+<div class="highlight-container" data-rel="Kotlin"><figure class="iseeu highlight kotlin"><table><tr><td class="code"><pre><span class="line">JSONObject(result).toString()</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<h2 id="⭐-3-请求日志记录"><a href="#⭐-3-请求日志记录" class="headerlink" title="⭐ 3. 请求日志记录"></a>⭐ 3. 请求日志记录</h2><p>这样就可以：</p>
+<ul>
+<li>把每次请求保存到本地</li>
+<li>用 RecyclerView 展示历史记录</li>
+</ul>
+<hr>
+<h2 id="⭐-4-环境切换（测试工具经典功能）"><a href="#⭐-4-环境切换（测试工具经典功能）" class="headerlink" title="⭐ 4. 环境切换（测试工具经典功能）"></a>⭐ 4. 环境切换（测试工具经典功能）</h2><p>比如：</p>
+<div class="highlight-container" data-rel="Kotlin"><figure class="iseeu highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="keyword">val</span> baseUrl = <span class="keyword">if</span> (isTest) &#123;</span><br><span class="line">    <span class="string">&quot;https://test-api.xxx.com&quot;</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="string">&quot;https://api.xxx.com&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<h2 id="⭐-5-抓包-日志（进阶）"><a href="#⭐-5-抓包-日志（进阶）" class="headerlink" title="⭐ 5. 抓包 &#x2F; 日志（进阶）"></a>⭐ 5. 抓包 &#x2F; 日志（进阶）</h2><p>用：</p>
+<div class="highlight-container" data-rel="Kotlin"><figure class="iseeu highlight kotlin"><table><tr><td class="code"><pre><span class="line">HttpLoggingInterceptor</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<p>说实话，这类岗位<strong>比纯业务开发更容易弯道超车</strong>，因为会的人少（直观感觉）🤕</p>
+]]></content>
+      <tags>
+        <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>📱 原生开发要凉了？Flutter / RN / KMP 这三兄弟到底谁能打</title>
+    <url>/2024/08/21/%E5%8E%9F%E7%94%9F%E5%BC%80%E5%8F%91%E8%A6%81%E5%87%89%E4%BA%86%EF%BC%9FFlutter-RN-KMP-%E8%BF%99%E4%B8%89%E5%85%84%E5%BC%9F%E5%88%B0%E5%BA%95%E8%B0%81%E8%83%BD%E6%89%93/</url>
+    <content><![CDATA[<blockquote>
+<p>最近刷技术社区，有种错觉：</p>
+<p>👉 原生开发要“下岗再就业”了？</p>
+</blockquote>
+<p>各种跨端技术层出不穷：</p>
+<ul>
+<li>Flutter</li>
+<li>React Native</li>
+<li>Kotlin Multiplatform</li>
+</ul>
+<p>看得人一脸懵：</p>
+<blockquote>
+<p>👉 到底该学哪个？</p>
+</blockquote>
+<hr>
+<h2 id="一、先说结论（避免浪费你时间）"><a href="#一、先说结论（避免浪费你时间）" class="headerlink" title="一、先说结论（避免浪费你时间）"></a>一、先说结论（避免浪费你时间）</h2><p>👉 没有“谁能统一天下”</p>
+<p>但：</p>
+<ul>
+<li>Flutter：工程效率高</li>
+<li>RN：生态强</li>
+<li>KMP：更像未来</li>
+</ul>
+<hr>
+<h2 id="二、Flutter：最像“全栈”的客户端方案"><a href="#二、Flutter：最像“全栈”的客户端方案" class="headerlink" title="二、Flutter：最像“全栈”的客户端方案"></a>二、Flutter：最像“全栈”的客户端方案</h2><hr>
+<h3 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h3><ul>
+<li>UI 自绘（跨平台一致）</li>
+<li>开发体验好（热重载很爽）</li>
+<li>性能还不错</li>
+</ul>
+<hr>
+<h3 id="缺点："><a href="#缺点：" class="headerlink" title="缺点："></a>缺点：</h3><p>👉 学了 Flutter ≈ 重学一套体系</p>
+<hr>
+<h3 id="一句话总结："><a href="#一句话总结：" class="headerlink" title="一句话总结："></a>一句话总结：</h3><blockquote>
+<p>Flutter &#x3D; “我不跟你系统玩，我自己来”</p>
+</blockquote>
+<hr>
+<h2 id="三、React-Native：老牌选手，生态强"><a href="#三、React-Native：老牌选手，生态强" class="headerlink" title="三、React Native：老牌选手，生态强"></a>三、React Native：老牌选手，生态强</h2><hr>
+<h3 id="优点：-1"><a href="#优点：-1" class="headerlink" title="优点："></a>优点：</h3><ul>
+<li>Web开发可以转</li>
+<li>生态成熟</li>
+<li>上手快</li>
+</ul>
+<hr>
+<h3 id="缺点：-1"><a href="#缺点：-1" class="headerlink" title="缺点："></a>缺点：</h3><ul>
+<li>性能不稳定</li>
+<li>依赖桥接</li>
+</ul>
+<hr>
+<h3 id="一句话总结：-1"><a href="#一句话总结：-1" class="headerlink" title="一句话总结："></a>一句话总结：</h3><blockquote>
+<p>RN &#x3D; “前端来救场”</p>
+</blockquote>
+<hr>
+<h2 id="四、Kotlin-Multiplatform：我最看好的一个"><a href="#四、Kotlin-Multiplatform：我最看好的一个" class="headerlink" title="四、Kotlin Multiplatform：我最看好的一个"></a>四、Kotlin Multiplatform：我最看好的一个</h2><hr>
+<h3 id="优点：-2"><a href="#优点：-2" class="headerlink" title="优点："></a>优点：</h3><ul>
+<li>复用业务逻辑</li>
+<li>不影响原生UI</li>
+<li>官方支持</li>
+</ul>
+<hr>
+<h3 id="缺点：-2"><a href="#缺点：-2" class="headerlink" title="缺点："></a>缺点：</h3><ul>
+<li>生态还在成长</li>
+<li>学习成本不低</li>
+</ul>
+<hr>
+<h3 id="一句话总结：-2"><a href="#一句话总结：-2" class="headerlink" title="一句话总结："></a>一句话总结：</h3><blockquote>
+<p>KMP &#x3D; “不替代原生，而是增强原生”</p>
+</blockquote>
+<hr>
+<h2 id="五、那-Android-开发怎么办？"><a href="#五、那-Android-开发怎么办？" class="headerlink" title="五、那 Android 开发怎么办？"></a>五、那 Android 开发怎么办？</h2><hr>
+<h3 id="❌-错误思路："><a href="#❌-错误思路：" class="headerlink" title="❌ 错误思路："></a>❌ 错误思路：</h3><ul>
+<li>全转跨端</li>
+<li>放弃原生</li>
+</ul>
+<hr>
+<h3 id="✅-正确思路："><a href="#✅-正确思路：" class="headerlink" title="✅ 正确思路："></a>✅ 正确思路：</h3><p>👉 <strong>原生 + 跨端 &#x3D; 组合拳</strong></p>
+<hr>
+<h2 id="六、我的策略（真实分享）"><a href="#六、我的策略（真实分享）" class="headerlink" title="六、我的策略（真实分享）"></a>六、我的策略（真实分享）</h2><p>我现在是：</p>
+<ul>
+<li>主线：Android 原生</li>
+<li>副线：KMP</li>
+<li>观察：Flutter</li>
+</ul>
+<hr>
+<h2 id="七、最后说点实话"><a href="#七、最后说点实话" class="headerlink" title="七、最后说点实话"></a>七、最后说点实话</h2><p>技术不会消失，只会：</p>
+<p>👉 <strong>不断分层</strong></p>
+<hr>
+<h2 id="🔚"><a href="#🔚" class="headerlink" title="🔚"></a>🔚</h2><p>如果你现在也在纠结：</p>
+<p>👉 学哪个？</p>
+<p>那我建议：</p>
+<blockquote>
+<p><strong>先站稳一个，再去扩展</strong></p>
+</blockquote>
+<p>别一开始就“全都要”（会崩 😄）</p>
+]]></content>
+      <tags>
+        <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>🤖 AI 写代码到底靠谱吗？我做了一次“人类 vs AI”的真实对比测试</title>
+    <url>/2025/05/22/%F0%9F%A4%96-AI-%E5%86%99%E4%BB%A3%E7%A0%81%E5%88%B0%E5%BA%95%E9%9D%A0%E8%B0%B1%E5%90%97%EF%BC%9F%E6%88%91%E5%81%9A%E4%BA%86%E4%B8%80%E6%AC%A1%E2%80%9C%E4%BA%BA%E7%B1%BB-vs-AI%E2%80%9D%E7%9A%84%E7%9C%9F%E5%AE%9E%E5%AF%B9%E6%AF%94%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[<blockquote>
+<p>最近一个很真实的场景：</p>
+<p>我：写个网络请求封装<br>AI：给你<br>我：报错了<br>AI：我帮你改<br>我：还是不行<br>AI：那你自己看看吧</p>
+<p>👉 ……</p>
+</blockquote>
+<p>于是我决定认真测试一波：</p>
+<blockquote>
+<p><strong>AI 写代码，到底能不能打？</strong></p>
+</blockquote>
+<hr>
+<h2 id="一、测试规则（尽量公平）"><a href="#一、测试规则（尽量公平）" class="headerlink" title="一、测试规则（尽量公平）"></a>一、测试规则（尽量公平）</h2><p>我选了3个场景：</p>
+<p>1️⃣ 简单功能（RecyclerView 列表）<br>2️⃣ 中等复杂（网络请求封装）<br>3️⃣ 稍复杂（MVVM结构搭建）</p>
+<p>对比对象：</p>
+<ul>
+<li>🤖 AI（主力输出）</li>
+<li>🧑 我（人工补刀）</li>
+</ul>
+<hr>
+<h2 id="二、结果一：简单任务（AI完胜）"><a href="#二、结果一：简单任务（AI完胜）" class="headerlink" title="二、结果一：简单任务（AI完胜）"></a>二、结果一：简单任务（AI完胜）</h2><h3 id="👉-场景：写一个列表"><a href="#👉-场景：写一个列表" class="headerlink" title="👉 场景：写一个列表"></a>👉 场景：写一个列表</h3><p>AI输出：</p>
+<ul>
+<li>结构完整</li>
+<li>代码规范</li>
+<li>基本可用</li>
+</ul>
+<p>👉 我只干了一件事：</p>
+<blockquote>
+<p>copy + run</p>
+</blockquote>
+<hr>
+<h3 id="✅-结论："><a href="#✅-结论：" class="headerlink" title="✅ 结论："></a>✅ 结论：</h3><blockquote>
+<p><strong>简单体力活，AI已经比人快很多了</strong></p>
+</blockquote>
+<hr>
+<h2 id="三、结果二：中等任务（AI开始“有点飘”）"><a href="#三、结果二：中等任务（AI开始“有点飘”）" class="headerlink" title="三、结果二：中等任务（AI开始“有点飘”）"></a>三、结果二：中等任务（AI开始“有点飘”）</h2><h3 id="👉-场景：封装网络请求"><a href="#👉-场景：封装网络请求" class="headerlink" title="👉 场景：封装网络请求"></a>👉 场景：封装网络请求</h3><p>AI输出：</p>
+<ul>
+<li>看起来很优雅</li>
+<li>但细节有问题</li>
+</ul>
+<p>比如：</p>
+<ul>
+<li>错误处理不全</li>
+<li>边界情况没考虑</li>
+</ul>
+<p>👉 我开始介入：</p>
+<ul>
+<li>改逻辑</li>
+<li>补异常</li>
+<li>调结构</li>
+</ul>
+<hr>
+<h3 id="⚠️-结论："><a href="#⚠️-结论：" class="headerlink" title="⚠️ 结论："></a>⚠️ 结论：</h3><blockquote>
+<p><strong>AI能写80%，但那20%决定生死</strong></p>
+</blockquote>
+<hr>
+<h2 id="四、结果三：复杂任务（AI：我先润了）"><a href="#四、结果三：复杂任务（AI：我先润了）" class="headerlink" title="四、结果三：复杂任务（AI：我先润了）"></a>四、结果三：复杂任务（AI：我先润了）</h2><h3 id="👉-场景：MVVM-架构搭建"><a href="#👉-场景：MVVM-架构搭建" class="headerlink" title="👉 场景：MVVM 架构搭建"></a>👉 场景：MVVM 架构搭建</h3><p>AI：</p>
+<ul>
+<li>能写框架</li>
+<li>但不贴业务</li>
+</ul>
+<p>问题：</p>
+<ul>
+<li>层级不合理</li>
+<li>逻辑分散</li>
+<li>可维护性差</li>
+</ul>
+<p>👉 最后变成：</p>
+<blockquote>
+<p>AI写骨架 + 我重构</p>
+</blockquote>
+<hr>
+<h2 id="五、最真实的体验总结"><a href="#五、最真实的体验总结" class="headerlink" title="五、最真实的体验总结"></a>五、最真实的体验总结</h2><p>我现在的开发模式已经变成：</p>
+<div class="highlight-container" data-rel="Text"><figure class="iseeu highlight text"><table><tr><td class="code"><pre><span class="line">AI：写初稿</span><br><span class="line">我：改逻辑</span><br><span class="line">AI：补细节</span><br><span class="line">我：收尾</span><br></pre></td></tr></table></figure></div>
+
+<p>👉 本质上：</p>
+<blockquote>
+<p><strong>我从“写代码的人”，变成了“代码审稿人”</strong></p>
+</blockquote>
+<hr>
+<h2 id="六、AI-最大的问题（说人话版）"><a href="#六、AI-最大的问题（说人话版）" class="headerlink" title="六、AI 最大的问题（说人话版）"></a>六、AI 最大的问题（说人话版）</h2><hr>
+<h3 id="❌-1-它很自信（但不一定对）"><a href="#❌-1-它很自信（但不一定对）" class="headerlink" title="❌ 1. 它很自信（但不一定对）"></a>❌ 1. 它很自信（但不一定对）</h3><p>AI最可怕的不是不会，而是：</p>
+<p>👉 <strong>错了还很坚定</strong></p>
+<hr>
+<h3 id="❌-2-不理解上下文"><a href="#❌-2-不理解上下文" class="headerlink" title="❌ 2. 不理解上下文"></a>❌ 2. 不理解上下文</h3><ul>
+<li>不知道你的项目结构</li>
+<li>不知道业务背景</li>
+</ul>
+<p>👉 所以经常：</p>
+<blockquote>
+<p>“写对了代码，写错了地方”</p>
+</blockquote>
+<hr>
+<h3 id="❌-3-Debug能力弱"><a href="#❌-3-Debug能力弱" class="headerlink" title="❌ 3. Debug能力弱"></a>❌ 3. Debug能力弱</h3><p>报错时：</p>
+<ul>
+<li>它会猜</li>
+<li>但不一定对</li>
+</ul>
+<hr>
+<h2 id="七、那我们该怎么办？"><a href="#七、那我们该怎么办？" class="headerlink" title="七、那我们该怎么办？"></a>七、那我们该怎么办？</h2><p>我的策略是：</p>
+<hr>
+<h3 id="✅-1-把AI当“实习生”"><a href="#✅-1-把AI当“实习生”" class="headerlink" title="✅ 1. 把AI当“实习生”"></a>✅ 1. 把AI当“实习生”</h3><ul>
+<li>给明确需求</li>
+<li>多review</li>
+<li>不盲信</li>
+</ul>
+<hr>
+<h3 id="✅-2-关键逻辑自己掌控"><a href="#✅-2-关键逻辑自己掌控" class="headerlink" title="✅ 2. 关键逻辑自己掌控"></a>✅ 2. 关键逻辑自己掌控</h3><ul>
+<li>架构设计</li>
+<li>核心流程</li>
+</ul>
+<p>👉 一定要自己来</p>
+<hr>
+<h3 id="✅-3-用AI提效，而不是替代"><a href="#✅-3-用AI提效，而不是替代" class="headerlink" title="✅ 3. 用AI提效，而不是替代"></a>✅ 3. 用AI提效，而不是替代</h3><p>👉 正确姿势：</p>
+<blockquote>
+<p><strong>让AI帮你加速，而不是替你思考</strong></p>
+</blockquote>
+<hr>
+<h2 id="八、最后一句总结"><a href="#八、最后一句总结" class="headerlink" title="八、最后一句总结"></a>八、最后一句总结</h2><p>如果你问我：</p>
+<p>👉 AI 会不会取代程序员？</p>
+<p>我现在的答案是：</p>
+<blockquote>
+<p>❌ 不会直接取代<br>✅ 但会取代“不会用AI的人”</p>
+</blockquote>
+<hr>
+<h2 id="🔚"><a href="#🔚" class="headerlink" title="🔚"></a>🔚</h2><p>写这篇的时候，我已经默认：</p>
+<p>👉 <strong>AI是开发工具链的一部分了</strong></p>
+<p>你呢？😄</p>
 ]]></content>
       <tags>
         <tag>学习</tag>
