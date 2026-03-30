@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="羽晨sir">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://example.com/2025/03/02/和kotlin的初次见面🥰/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="1. 类与主构造函数（你最疑惑的点）是什么？Kotlin 把构造函数直接写在类名后面的括号里，叫主构造函数。 Java 写法12345678910111213141516171819public class User &#123;    private String name;    private int age;    &#x2F;&#x2F; 构造方法    public User(String name, i">
+<meta property="og:type" content="article">
+<meta property="og:title" content="和kotlin的初次见面🥰">
+<meta property="og:url" content="http://example.com/2025/03/02/%E5%92%8Ckotlin%E7%9A%84%E5%88%9D%E6%AC%A1%E8%A7%81%E9%9D%A2%F0%9F%A5%B0/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1. 类与主构造函数（你最疑惑的点）是什么？Kotlin 把构造函数直接写在类名后面的括号里，叫主构造函数。 Java 写法12345678910111213141516171819public class User &#123;    private String name;    private int age;    &#x2F;&#x2F; 构造方法    public User(String name, i">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-03-02T10:40:49.000Z">
+<meta property="article:modified_time" content="2026-03-30T13:47:08.430Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="学习">
+<meta name="twitter:card" content="summary">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="https://i.imgs.ovh/2023/11/21/Hg1h0.png" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://i.imgs.ovh/2023/11/21/Hg1h0.png">
+    <meta name="theme-color" content="#a14b59">
+    <link rel="shortcut icon" href="https://i.imgs.ovh/2023/11/21/Hg1h0.png">
+    <!--- Page Info-->
+    
+    <title>
+        
+            和kotlin的初次见面🥰 -
+        
+        Welcom To 羽晨的随心记☕
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/assets/build/styles.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/fonts.css">
+
+    
+<link rel="stylesheet" href="/fonts/Satoshi/satoshi.css">
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+    <!--- Font Part-->
+    
+    
+    
+    
+
+    <!--- Inject Part-->
+    
+    <script id="hexo-configurations">
+    window.config = {"hostname":"example.com","root":"/","language":"en","path":"search.xml"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"title_alignment":"left"},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":["💗","💕","💕","💞"]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#a14b59","secondary":null},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"羽晨的随心记☕","subtitle":{"text":["生活不止眼前的苟且，还有诗与远方……","相信奇迹的人本身就跟奇迹一样了不起💕"],"hitokoto":{"enable":true,"api":"https://v1.hitokoto.cn/"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"links":{"github":"https://github.com/aduie","instagram":null,"zhihu":"https://www.zhihu.com/people/delusion-71-62","twitter":null,"email":"2574560449@qq.com"},"qrs":{"weixin":"https://ycsir.asia/all_img/vx.jpg"}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":true,"type":"fixed","audios":[{"name":"如果可以 (Live版)","artist":"汪苏泷 / 徐佳莹","url":"https://www.ycsir.asia/music/%E5%A6%82%E6%9E%9C%E5%8F%AF%E4%BB%A5.mp3","cover":"https://www.ycsir.asia/all_img/music_img/26.jpg"},{"name":"2023爆火30首年度热歌大串烧","artist":"陆鳐LuLu-哔哩哔哩UP主","url":"https://ycsir.asia/music/2023%E7%88%86%E7%81%AB30%E9%A6%96%E5%B9%B4%E5%BA%A6%E7%83%AD%E6%AD%8C%E5%A4%A7%E4%B8%B2%E7%83%A7.mp3","cover":"https://www.ycsir.asia/all_img/music_img/1.png"},{"name":"后会无期（翻唱）","artist":"九三的耳朵不是特别好、是小钱-","url":"https://ycsir.asia/music/%E5%90%8E%E4%BC%9A%E6%97%A0%E6%9C%9F(%E4%B9%9D%E4%B8%89%E7%9A%84%E8%80%B3%E6%9C%B5%E4%B8%8D%E6%98%AF%E7%89%B9%E5%88%AB%E5%A5%BD+%E6%98%AF%E5%B0%8F%E9%92%B1-).mp3","cover":"https://www.ycsir.asia/all_img/music_img/2.png"},{"name":"爱怎么了","artist":"陈村长","url":"https://ycsir.asia/music/%E7%88%B1%E6%80%8E%E4%B9%88%E4%BA%86.mp3","cover":"https://www.ycsir.asia/all_img/music_img/3.webp"},{"name":"如果爱忘了（live）","artist":"汪苏泷 / 单依纯","url":"https://www.ycsir.asia/music/%E5%A6%82%E6%9E%9C%E7%88%B1%E5%BF%98%E4%BA%86.mp3","cover":"https://www.ycsir.asia/all_img/music_img/26.jpg"},{"name":"阿禹ayy一吻天荒+晚夜微雨问海棠 (Live)","artist":"阿禹ayy","url":"https://ycsir.asia/music/%E9%98%BF%E7%A6%B9ayy%E4%B8%80%E5%90%BB%E5%A4%A9%E8%8D%92+%E6%99%9A%E5%A4%9C%E5%BE%AE%E9%9B%A8%E9%97%AE%E6%B5%B7%E6%A3%A0%20(Live).mp3","cover":"https://www.ycsir.asia/all_img/music_img/4.jpeg"},{"name":"2019歌曲大串烧（翻唱）","artist":"搬运者:Adieu","url":"https://ycsir.asia/music/2019%E6%AD%8C%E6%9B%B2%E4%B8%B2%E7%83%A7.mp3","cover":"https://www.ycsir.asia/all_img/avatar.jpg"},{"name":"耍把戏","artist":"阿禹ayy","url":"https://ycsir.asia/music/%E8%80%8D%E6%8A%8A%E6%88%8F-%E9%98%BF%E7%A6%B9.mp3","cover":"https://www.ycsir.asia/all_img/music_img/4.jpeg"},{"name":"溯","artist":"纯音乐","url":"https://ycsir.asia/music/%E6%BA%AF.mp3","cover":"https://www.ycsir.asia/all_img/music_img/5.webp"},{"name":"红色高跟鞋","artist":"蔡健雅","url":"https://ycsir.asia/music/%E7%BA%A2%E8%89%B2%E9%AB%98%E8%B7%9F%E9%9E%8B.mp3","cover":"https://www.ycsir.asia/all_img/music_img/6.jpg"},{"name":"We Don't Talk Anymore","artist":"Charlie Puth / Selena Gomez","url":"https://ycsir.asia/music/WeDontTalkAnymore.mp3","cover":"https://www.ycsir.asia/all_img/music_img/7.jpg"},{"name":"Cupid (Speed up)","artist":"xdemkw","url":"https://ycsir.asia/music/FIFTY%20FIFTY%20-%20Cupid%20(Twin%20Ver.)%20(xdemkw%20Speed%20Up%E7%89%88).mp3","cover":"https://www.ycsir.asia/all_img/music_img/8.jpg"},{"name":"把回忆拼好给你","artist":"王贰浪","url":"http://music.163.com/song/media/outer/url?id=1403318151.mp3","cover":"https://www.ycsir.asia/all_img/music_img/9.jpg"},{"name":"紫荆花盛开(DJ版)","artist":"李荣浩、梁咏琪","url":"https://ycsir.asia/music/%E7%B4%AB%E8%8D%86%E8%8A%B1%E7%9B%9B%E5%BC%80DJ%E5%AE%8C%E6%95%B4%E7%89%88.mp3","cover":"https://www.ycsir.asia/all_img/music_img/10.jpg"},{"name":"夜航星 (Night Voyager)","artist":"不才,三体宇宙","url":"http://music.163.com/song/media/outer/url?id=1431292823.mp3","cover":"https://www.ycsir.asia/all_img/music_img/11.jpg"},{"name":"悬溺","artist":"葛东琪","url":"http://music.163.com/song/media/outer/url?id=1397345903.mp3","cover":"https://www.ycsir.asia/all_img/music_img/12.jpg"},{"name":"哪里都是你","artist":"队长","url":"http://music.163.com/song/media/outer/url?id=488249475.mp3","cover":"https://www.ycsir.asia/all_img/music_img/13.jpg"},{"name":"云烟成雨","artist":"房东的猫","url":"https://ycsir.asia/music/%E4%BA%91%E7%83%9F%E6%88%90%E9%9B%A8.mp3","cover":"https://www.ycsir.asia/all_img/music_img/14.jpg"},{"name":"听悲伤的情歌","artist":"苏星捷","url":"http://music.163.com/song/media/outer/url?id=2051936949.mp3","cover":"https://www.ycsir.asia/all_img/music_img/15.jpg"},{"name":"再飞行","artist":"逃跑日记","url":"https://ycsir.asia/music/%E5%86%8D%E9%A3%9E%E8%A1%8C.mp3","cover":"https://www.ycsir.asia/all_img/music_img/16.jpg"},{"name":"有何不可","artist":"许嵩","url":"https://ycsir.asia/music/%E8%AE%B8%E5%B5%A9%20-%20%E6%9C%89%E4%BD%95%E4%B8%8D%E5%8F%AF.mp3","cover":"https://www.ycsir.asia/all_img/music_img/17.jpg"},{"name":"初雪","artist":"EXO","url":"https://ycsir.asia/music/EXO%20-%20%E5%88%9D%E9%9B%AA.mp3","cover":"https://www.ycsir.asia/all_img/music_img/18.jpg"},{"name":"落日与晚风","artist":"IN-K、王忻辰、苏星婕","url":"https://ycsir.asia/music/%E8%90%BD%E6%97%A5%E4%B8%8E%E6%99%9A%E9%A3%8E.mp3","cover":"https://www.ycsir.asia/all_img/music_img/19.jpg"},{"name":"LOVE SCENARIO","artist":"iKON","url":"https://ycsir.asia/music/LOVE%20SCENARIO-iKON%20(%EC%95%84%EC%9D%B4%EC%BD%98).mp3","cover":"https://www.ycsir.asia/all_img/music_img/20.jpg"},{"name":"wake","artist":"Hillsong Young & Free","url":"https://ycsir.asia/music/wake.mp3","cover":"https://www.ycsir.asia/all_img/music_img/21.jpg"},{"name":"稻香","artist":"周杰伦","url":"https://ycsir.asia/music/%E7%A8%BB%E9%A6%99-%E5%91%A8%E6%9D%B0%E4%BC%A6.mp3","cover":"https://www.ycsir.asia/all_img/music_img/22.jpg"},{"name":"暗影刺客OP","artist":"王舜禾","url":"https://ycsir.asia/music/%E6%9A%97%E5%BD%B1%E5%88%BA%E5%AE%A2.mp3","cover":"https://www.ycsir.asia/all_img/music_img/23.jpg"},{"name":"《星月落》","artist":"浮生梦","url":"https://ycsir.asia/music/%E6%B5%AE%E7%94%9F%E6%A2%A6%20%E3%80%8A%20%E6%98%9F%E6%9C%88%E8%90%BD%E3%80%8B.mp3","cover":"https://www.ycsir.asia/all_img/music_img/24.jpg"},{"name":"堕(DJAh版)","artist":"旺仔小乔","url":"https://ycsir.asia/music/%E6%97%BA%E4%BB%94%E5%B0%8F%E4%B9%94-%E5%A0%95.mp3","cover":"https://www.ycsir.asia/all_img/music_img/25.jpg"}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.5.4","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"links":{"Homework":{"path":"/homework/","icon":"fa-solid fa-wand-magic-sparkles"},"photograph":{"path":"/masonry/","icon":"fa-solid fa-image"},"statement":{"path":"/essays/","icon":"fa-solid fa-feather"},"Else":{"icon":"fa-solid fa-sparkles","submenus":{"SuperTool":"/super/","Game":"/links/","Download":"/download"}}},"search":{"enable":true,"preload":false}},"page_templates":{"friends_column":3,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"info","announcement":"“遇见，获得，失去，成长，释怀，完结。我与旧事归于尽，来年依旧迎花开”🧡","links":{"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"}}},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2022/5/17 11:45:14"};
+    window.lang_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    window.data = {"masonry":true};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="swup-progress-icon">
+            <i class="fa-solid fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container" id="swup">
+
+    
+
+    <div class="main-content-container">
+
+
+        <div class="main-content-header">
+            <header class="navbar-container">
+    
+    <div class="navbar-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                Welcom To 羽晨的随心记☕
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/homework/"  >
+                                    
+                                        
+                                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                                        
+                                        HOMEWORK
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/masonry/"  >
+                                    
+                                        
+                                            <i class="fa-solid fa-image"></i>
+                                        
+                                        PHOTOGRAPH
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/essays/"  >
+                                    
+                                        
+                                            <i class="fa-solid fa-feather"></i>
+                                        
+                                        STATEMENT
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown" 
+                                    href="#" onClick="return false;">
+                                    
+                                        
+                                            <i class="fa-solid fa-sparkles"></i>
+                                        
+                                        ELSE&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                    
+                                        <li>
+                                        <a href="/super/">SUPERTOOL
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a href="/links/">GAME
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a href="/download">DOWNLOAD
+                                        </a>
+                                        </li>
+                                    
+                                    </ul>
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i></div>
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="navbar-drawer w-full absolute top-0 left-0 bg-background-color">
+        <ul class="drawer-navbar-list flex flex-col justify-start items-center">
+            
+                
+                    <li class="drawer-navbar-item text-base my-1.5 flex justify-center items-center">
+                        <a class="rounded-3xl py-1.5 px-5 hover:border hover:!text-primary active:!text-primary group " 
+                        href="/homework/"  >
+                             
+                                
+                                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                                
+                                HOMEWORK
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-navbar-item text-base my-1.5 flex justify-center items-center">
+                        <a class="rounded-3xl py-1.5 px-5 hover:border hover:!text-primary active:!text-primary group " 
+                        href="/masonry/"  >
+                             
+                                
+                                    <i class="fa-solid fa-image"></i>
+                                
+                                PHOTOGRAPH
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-navbar-item text-base my-1.5 flex justify-center items-center">
+                        <a class="rounded-3xl py-1.5 px-5 hover:border hover:!text-primary active:!text-primary group " 
+                        href="/essays/"  >
+                             
+                                
+                                    <i class="fa-solid fa-feather"></i>
+                                
+                                STATEMENT
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-navbar-item text-base my-1.5 flex justify-center items-center">
+                        <a class="rounded-3xl py-1.5 px-5 hover:border hover:!text-primary active:!text-primary group has-dropdown" 
+                        href="#" onClick="return false;">
+                            
+                                
+                                    <i class="fa-solid fa-sparkles"></i>
+                                
+                                ELSE&nbsp;<i class="group-hover:rotate-180 transition-transform fa-solid fa-chevron-down"></i>
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                              
+                        
+                            <li class="drawer-navbar-item text-base flex justify-center items-center hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                <a class="py-0.5" href="/super/">SUPERTOOL</a>
+                            </li>
+                        
+                            <li class="drawer-navbar-item text-base flex justify-center items-center hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                <a class="py-0.5" href="/links/">GAME</a>
+                            </li>
+                        
+                            <li class="drawer-navbar-item text-base flex justify-center items-center hover:underline active:underline hover:underline-offset-1 rounded-3xl">
+                                <a class="py-0.5" href="/download">DOWNLOAD</a>
+                            </li>
+                        
+                    
+            
+
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="post-page-container">
+    <div class="article-content-container">
+
+        <div class="article-title relative w-full">
+            
+                <div class="w-full flex items-center pt-6 justify-start">
+                    <h1 class="article-title-regular text-second-text-color text-4xl md:text-6xl font-bold px-2 sm:px-6 md:px-8 py-3">和kotlin的初次见面🥰</h1>
+                </div>
+            
+            </div>
+
+        
+            <div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+                    <img src="https://ycsir.asia/all_img/avatar.jpg">
+                </div>
+                <div class="info flex flex-col justify-between">
+                    <div class="author flex items-center">
+                        <span class="name text-default-text-color text-lg font-semibold">羽晨sir</span>
+                        
+                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">💕</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2025-03-02 18:40:49</span>
+        <span class="mobile">2025-03-02 18:40:49</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2026-03-30 21:47:08</span>
+            <span class="mobile">2026-03-30 21:47:08</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+            <h1 id="1-类与主构造函数（你最疑惑的点）"><a href="#1-类与主构造函数（你最疑惑的点）" class="headerlink" title="1. 类与主构造函数（你最疑惑的点）"></a>1. 类与主构造函数（你最疑惑的点）</h1><h2 id="是什么？"><a href="#是什么？" class="headerlink" title="是什么？"></a>是什么？</h2><p>Kotlin 把<strong>构造函数直接写在类名后面的括号里</strong>，叫<strong>主构造函数</strong>。</p>
+<h2 id="Java-写法"><a href="#Java-写法" class="headerlink" title="Java 写法"></a>Java 写法</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">public class User &#123;</span><br><span class="line">    private String name;</span><br><span class="line">    private int age;</span><br><span class="line"></span><br><span class="line">    // 构造方法</span><br><span class="line">    public User(String name, int age) &#123;</span><br><span class="line">        this.name = name;</span><br><span class="line">        this.age = age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // getter</span><br><span class="line">    public String getName() &#123;</span><br><span class="line">        return name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public int getAge() &#123;</span><br><span class="line">        return age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="Kotlin-写法"><a href="#Kotlin-写法" class="headerlink" title="Kotlin 写法"></a>Kotlin 写法</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">class User(val name: String, val age: Int)</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="关键解释"><a href="#关键解释" class="headerlink" title="关键解释"></a>关键解释</h2><ol>
+<li><strong>类名后括号 &#x3D; 构造函数</strong></li>
+<li>val &#x2F;var &#x3D; 自动声明成员变量 + 自动生成 getter<ul>
+<li><code>val</code> &#x3D; 只读（等价 Java private final + getter）</li>
+<li><code>var</code> &#x3D; 可读写（等价 Java private + getter + setter）</li>
+</ul>
+</li>
+<li>不用写 <code>this.xxx = xxx</code>，Kotlin 自动赋值</li>
+<li>大括号都可以省略（类里没有其他代码时）</li>
+</ol>
+<hr>
+<h1 id="2-构造函数默认参数"><a href="#2-构造函数默认参数" class="headerlink" title="2. 构造函数默认参数"></a>2. 构造函数默认参数</h1><h2 id="是什么？-1"><a href="#是什么？-1" class="headerlink" title="是什么？"></a>是什么？</h2><p>构造参数可以直接赋默认值，调用时可传可不传。</p>
+<h2 id="Kotlin"><a href="#Kotlin" class="headerlink" title="Kotlin"></a>Kotlin</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">class User(</span><br><span class="line">    val name: String = &quot;Unknown&quot;,</span><br><span class="line">    val age: Int = 0</span><br><span class="line">)</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">User()                  // 使用全部默认值</span><br><span class="line">User(&quot;ZhangSan&quot;)        // 只传 name</span><br><span class="line">User(age = 20)          // 具名参数传值</span><br><span class="line">User(&quot;LiSi&quot;, 25)        // 全传</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="Java-对比（非常麻烦）"><a href="#Java-对比（非常麻烦）" class="headerlink" title="Java 对比（非常麻烦）"></a>Java 对比（非常麻烦）</h2><p>Java 必须写<strong>多个重载构造方法</strong>：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public User() &#123;</span><br><span class="line">    this.name = &quot;Unknown&quot;;</span><br><span class="line">    this.age = 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public User(String name) &#123;</span><br><span class="line">    this.name = name;</span><br><span class="line">    this.age = 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public User(String name, int age) &#123;</span><br><span class="line">    this.name = name;</span><br><span class="line">    this.age = age;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<h1 id="3-变量声明：val-var"><a href="#3-变量声明：val-var" class="headerlink" title="3. 变量声明：val &amp; var"></a>3. 变量声明：val &amp; var</h1><h2 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 不可变</span><br><span class="line">final String name = &quot;ZhangSan&quot;;</span><br><span class="line">// 可变</span><br><span class="line">int age = 20;</span><br><span class="line">age = 21;</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="Kotlin-1"><a href="#Kotlin-1" class="headerlink" title="Kotlin"></a>Kotlin</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 不可变变量（优先用 val）</span><br><span class="line">val name: String = &quot;ZhangSan&quot;</span><br><span class="line">// 可变变量</span><br><span class="line">var age: Int = 20</span><br><span class="line">age = 21</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="重点"><a href="#重点" class="headerlink" title="重点"></a>重点</h2><ul>
+<li>Kotlin 必须<strong>初始化</strong>，不能只声明不赋值</li>
+<li>类型可自动推导，一般不用写：<code>val name = &quot;ZhangSan&quot;</code></li>
+</ul>
+<hr>
+<h1 id="4-空安全（Java-最容易-NPE）"><a href="#4-空安全（Java-最容易-NPE）" class="headerlink" title="4. 空安全（Java 最容易 NPE）"></a>4. 空安全（Java 最容易 NPE）</h1><h2 id="Java-空指针问题"><a href="#Java-空指针问题" class="headerlink" title="Java 空指针问题"></a>Java 空指针问题</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String name = null;</span><br><span class="line">System.out.println(name.length()); // 直接崩溃 NullPointerException</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="Kotlin-可空类型"><a href="#Kotlin-可空类型" class="headerlink" title="Kotlin 可空类型"></a>Kotlin 可空类型</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 加 ? 表示可以为 null</span><br><span class="line">val name: String? = null</span><br><span class="line"></span><br><span class="line">// 调用必须安全调用</span><br><span class="line">name?.length()    // 不为 null 才执行，为 null 返回 null</span><br><span class="line">name!!.length()   // 强制不为 null（会崩溃，慎用）</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<h1 id="5-函数（方法）定义"><a href="#5-函数（方法）定义" class="headerlink" title="5. 函数（方法）定义"></a>5. 函数（方法）定义</h1><h2 id="Java-1"><a href="#Java-1" class="headerlink" title="Java"></a>Java</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public int add(int a, int b) &#123;</span><br><span class="line">    return a + b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="Kotlin-2"><a href="#Kotlin-2" class="headerlink" title="Kotlin"></a>Kotlin</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">fun add(a: Int, b: Int): Int &#123;</span><br><span class="line">    return a + b</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 单行函数简化</span><br><span class="line">fun add(a: Int, b: Int) = a + b</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<h1 id="6-静态代码-伴生对象-companion-object"><a href="#6-静态代码-伴生对象-companion-object" class="headerlink" title="6. 静态代码 &amp; 伴生对象 companion object"></a>6. 静态代码 &amp; 伴生对象 companion object</h1><blockquote>
+<p><strong>companion object &#x3D; 类级别的静态成员（类似 Java 的 static）</strong></p>
+<p>它属于 <strong>类</strong>，不属于对象。</p>
+<p>你不需要创建实例，就能直接调用。</p>
+</blockquote>
+<h3 id="1-先看-Java"><a href="#1-先看-Java" class="headerlink" title="1. 先看 Java"></a>1. 先看 Java</h3><p>在 Java 里你写一个工具方法或常量，通常这样写：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public class User &#123;</span><br><span class="line">    public static String TAG = &quot;User&quot;;</span><br><span class="line">    public static void login() &#123;</span><br><span class="line">        // ...</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>使用：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">User.login();</span><br><span class="line">User.TAG;</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>static &#x3D; 类级别，不依赖对象。</strong></p>
+<h3 id="2-Kotlin-为什么不能用-static？"><a href="#2-Kotlin-为什么不能用-static？" class="headerlink" title="2. Kotlin 为什么不能用 static？"></a>2. Kotlin 为什么不能用 static？</h3><blockquote>
+<p>Kotlin <strong>彻底去掉了 static 关键字</strong>。</p>
+<p>Kotlin 用 <strong>companion object</strong> 来替代。</p>
+</blockquote>
+<h3 id="3-companion-object-写法（最关键）kotlin中"><a href="#3-companion-object-写法（最关键）kotlin中" class="headerlink" title="3. companion object 写法（最关键）kotlin中:"></a>3. companion object 写法（最关键）kotlin中:</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">class User &#123;</span><br><span class="line">    companion object &#123;</span><br><span class="line">        val TAG = &quot;User&quot;</span><br><span class="line">        fun login() &#123;</span><br><span class="line">            // ...</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>使用：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">User.login()</span><br><span class="line">User.TAG</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>效果和 Java static 完全一样！</strong></p>
+<hr>
+<h1 id="7-类的继承-实现接口"><a href="#7-类的继承-实现接口" class="headerlink" title="7. 类的继承 &#x2F; 实现接口"></a>7. 类的继承 &#x2F; 实现接口</h1><h2 id="Java-2"><a href="#Java-2" class="headerlink" title="Java"></a>Java</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public class MyConverter implements NetConverter &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void onConvert() &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="Kotlin-3"><a href="#Kotlin-3" class="headerlink" title="Kotlin"></a>Kotlin</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">class MyConverter : NetConverter &#123;</span><br><span class="line">    override fun onConvert() &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="重点-1"><a href="#重点-1" class="headerlink" title="重点"></a>重点</h2><ul>
+<li>用 <code>:</code> 代替 <code>extends / implements</code></li>
+<li>override 是<strong>关键字</strong>，不是注解，必须写</li>
+<li>父类构造要传参时：<code>class User() : BaseModel()</code></li>
+</ul>
+<hr>
+<h1 id="8-匿名内部类-对象表达式"><a href="#8-匿名内部类-对象表达式" class="headerlink" title="8. 匿名内部类 &#x2F; 对象表达式"></a>8. 匿名内部类 &#x2F; 对象表达式</h1><h2 id="Java-点击事件"><a href="#Java-点击事件" class="headerlink" title="Java 点击事件"></a>Java 点击事件</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">view.setOnClickListener(new View.OnClickListener() &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void onClick(View v) &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="Kotlin-4"><a href="#Kotlin-4" class="headerlink" title="Kotlin"></a>Kotlin</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">view.setOnClickListener(object : View.OnClickListener &#123;</span><br><span class="line">    override fun onClick(v: View?) &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<h1 id="9-字符串模板（超级好用）"><a href="#9-字符串模板（超级好用）" class="headerlink" title="9. 字符串模板（超级好用）"></a>9. 字符串模板（超级好用）</h1><h2 id="Java-3"><a href="#Java-3" class="headerlink" title="Java"></a>Java</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String name = &quot;ZhangSan&quot;;</span><br><span class="line">String text = &quot;My name is &quot; + name;</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="Kotlin-5"><a href="#Kotlin-5" class="headerlink" title="Kotlin"></a>Kotlin</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">val name = &quot;ZhangSan&quot;</span><br><span class="line">val text = &quot;My name is $name&quot;</span><br><span class="line"></span><br><span class="line">// 表达式</span><br><span class="line">val text = &quot;Next year age: $&#123;age + 1&#125;&quot;	</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<h1 id="10-when-表达式（替代-switch）"><a href="#10-when-表达式（替代-switch）" class="headerlink" title="10. when 表达式（替代 switch）"></a>10. when 表达式（替代 switch）</h1><h2 id="Java-4"><a href="#Java-4" class="headerlink" title="Java"></a>Java</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">switch (code) &#123;</span><br><span class="line">    case 0:</span><br><span class="line">        msg = &quot;成功&quot;;</span><br><span class="line">        break;</span><br><span class="line">    case 1:</span><br><span class="line">        msg = &quot;失败&quot;;</span><br><span class="line">        break;</span><br><span class="line">    default:</span><br><span class="line">        msg = &quot;未知&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="Kotlin-6"><a href="#Kotlin-6" class="headerlink" title="Kotlin"></a>Kotlin</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">val msg = when (code) &#123;</span><br><span class="line">    0 -&gt; &quot;成功&quot;</span><br><span class="line">    1 -&gt; &quot;失败&quot;</span><br><span class="line">    else -&gt; &quot;未知&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>例如：某网络的状态码判断就是这个：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">when &#123;</span><br><span class="line">    code in 200..299 -&gt; &#123;&#125;</span><br><span class="line">    code in 400..499 -&gt; &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<h1 id="11-扩展函数"><a href="#11-扩展函数" class="headerlink" title="11. 扩展函数"></a>11. 扩展函数</h1><blockquote>
+<p>你可以给任何已有的类（比如 String、Int、Activity）添加新方法！</p>
+</blockquote>
+<h3 id="1-语法结构"><a href="#1-语法结构" class="headerlink" title="1. 语法结构"></a>1. 语法结构</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fun 被扩展的类.新方法名(参数): 返回值 &#123;</span><br><span class="line">    方法体</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>在项目里中类似于这种：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fun &lt;R&gt; String.parseBody(type: KType): R? &#123; // 此处&lt;R&gt;是让这个方法可以解析成【任意类型】，而不局限于某一种类</span><br><span class="line">    return …… as R 					// 把前面的结果 → 强制转换成 R 类型</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>翻译成人话：</p>
+<blockquote>
+<p>我给 <strong>String 类</strong> 扩展一个新方法，名字叫 <strong>parseBody</strong></p>
+<p>任何字符串都能直接调用：<code>&quot;字符串&quot;.parseBody(...)</code></p>
+</blockquote>
+<h3 id="2-超级简单小例子（你一看就会）"><a href="#2-超级简单小例子（你一看就会）" class="headerlink" title="2. 超级简单小例子（你一看就会）"></a>2. 超级简单小例子（你一看就会）</h3><h2 id="给-String-加一个方法：转成大写"><a href="#给-String-加一个方法：转成大写" class="headerlink" title="给 String 加一个方法：转成大写"></a>给 String 加一个方法：转成大写</h2><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fun String.toMyUpper(): String &#123;</span><br><span class="line">    return this.uppercase()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>使用：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;hello&quot;.toMyUpper() // 结果 HELLO</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<h1 id="12-泛型-泛型方法"><a href="#12-泛型-泛型方法" class="headerlink" title="12. 泛型 &amp;  泛型方法"></a>12. 泛型 &amp; <R> 泛型方法</h1><blockquote>
+<p>一、先讲：<strong>泛型方法 <R> 到底是什么？为什么要这么写？</strong></p>
+<p><code>&lt;R&gt;</code> &#x3D; 一个 “万能类型占位符”</p>
+<p>意思：<strong>这个方法可以返回 &#x2F; 处理任意类型，你要什么类型，它就变成什么类型</strong></p>
+</blockquote>
+<h3 id="1-先看你最疑惑的代码"><a href="#1-先看你最疑惑的代码" class="headerlink" title="1. 先看你最疑惑的代码"></a>1. 先看你最疑惑的代码</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fun &lt;R&gt; onConvert(...): R? &#123;</span><br></pre></td></tr></table></figure></div>
+
+<p>你肯定想问：</p>
+<p><strong><R> 写在中间干嘛？R 又是什么？</strong></p>
+<p>我拆开讲：</p>
+<h4 id="①-写在这里代表什么？"><a href="#①-写在这里代表什么？" class="headerlink" title="① &lt;R&gt; 写在这里代表什么？"></a>① <code>&lt;R&gt;</code> 写在这里代表什么？</h4><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fun &lt;R&gt; 函数名(参数): 返回值 &#123;</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="声明：这个函数是一个「泛型函数」"><a href="#声明：这个函数是一个「泛型函数」" class="headerlink" title=" &#x3D; 声明：这个函数是一个「泛型函数」"></a><strong><R> &#x3D; 声明：这个函数是一个「泛型函数」</strong></h4><p>意思就是：</p>
+<blockquote>
+<p>我这个函数不固定处理某一种类型，</p>
+<p>你调用时告诉我要什么类型（User&#x2F;Article&#x2F;List…），</p>
+<p>我就给你返回什么类型。</p>
+</blockquote>
+<h3 id="Kotlin-提供"><a href="#Kotlin-提供" class="headerlink" title="Kotlin 提供 "></a>Kotlin 提供 <strong><R></strong></h3><p>一个方法顶所有：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fun &lt;R&gt; parse(json: String): R &#123; ... &#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>你调用时：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">parse&lt;User&gt;(json)      → 返回 User</span><br><span class="line">parse&lt;Article&gt;(json)  → 返回 Article</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<h1 id="13-延迟初始化-lateinit"><a href="#13-延迟初始化-lateinit" class="headerlink" title="13. 延迟初始化 &#x2F;lateinit"></a>13. 延迟初始化 &#x2F;lateinit</h1><h3 id="1-Kotlin-有一个严格规则："><a href="#1-Kotlin-有一个严格规则：" class="headerlink" title="1. Kotlin 有一个严格规则："></a>1. Kotlin 有一个严格规则：</h3><blockquote>
+<p><strong>变量必须初始化，不能只声明不赋值</strong></p>
+</blockquote>
+<p>Java 可以这样：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">private User user;</span><br></pre></td></tr></table></figure></div>
+
+<p>不赋值也能运行。</p>
+<blockquote>
+<p>但 Kotlin <strong>不允许</strong>！</p>
+</blockquote>
+<p>你写：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var user: User   → 报错！必须赋值！</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<h3 id="2-但有些变量，我确实现在不能赋值！"><a href="#2-但有些变量，我确实现在不能赋值！" class="headerlink" title="2. 但有些变量，我确实现在不能赋值！"></a>2. 但有些变量，我确实现在不能赋值！</h3><p>比如：</p>
+<ul>
+<li>你后面从网络拿数据</li>
+<li>你后面从 intent 拿数据</li>
+<li>你后面初始化</li>
+</ul>
+<blockquote>
+<p>怎么办？答案：<strong>加 lateinit ！</strong></p>
+</blockquote>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lateinit var user: User</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<h1 id="14-顶层函数（直接在-kt-文件里写函数，不用类包裹）"><a href="#14-顶层函数（直接在-kt-文件里写函数，不用类包裹）" class="headerlink" title="14. 顶层函数（直接在 kt 文件里写函数，不用类包裹）"></a>14. 顶层函数（直接在 kt 文件里写函数，不用类包裹）</h1><h3 id="1-先看对比：Java-必须包在类里，超级麻烦"><a href="#1-先看对比：Java-必须包在类里，超级麻烦" class="headerlink" title="1. 先看对比：Java 必须包在类里，超级麻烦"></a>1. 先看对比：Java 必须包在类里，超级麻烦</h3><blockquote>
+<p>Java 有一个<strong>死规矩</strong>：</p>
+<p><strong>所有方法必须写在 class 里面！</strong></p>
+<p>你想写一个工具方法，必须包一层类。</p>
+</blockquote>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// 必须建一个类来包裹方法</span><br><span class="line">public class StringUtils &#123;</span><br><span class="line"></span><br><span class="line">    // 静态工具方法</span><br><span class="line">    public static boolean isEmpty(String text) &#123;</span><br><span class="line">        return text == null || text.length() == 0;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>使用的时候：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 必须 类名.方法()</span><br><span class="line">StringUtils.isEmpty(&quot;hello&quot;);</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>很烦！多写了一个类！</strong></p>
+<h3 id="2-Kotlin-顶层函数：直接写，不用类！"><a href="#2-Kotlin-顶层函数：直接写，不用类！" class="headerlink" title="2. Kotlin 顶层函数：直接写，不用类！"></a>2. Kotlin 顶层函数：直接写，不用类！</h3><blockquote>
+<p>Kotlin 打破了 Java 的规矩：</p>
+<p><strong>你可以直接把函数写在 .kt 文件里，不需要任何 class 包裹！</strong></p>
+<p>这就叫 <strong>顶层函数（Top-level Function）</strong></p>
+</blockquote>
+<h3 id="举例：新建一个文件-StringExt-kt"><a href="#举例：新建一个文件-StringExt-kt" class="headerlink" title="举例：新建一个文件 StringExt.kt"></a>举例：新建一个文件 <code>StringExt.kt</code></h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 直接写！外面没有任何 class！</span><br><span class="line">fun isEmpty(text: String): Boolean &#123;</span><br><span class="line">    return text.isNullOrEmpty()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>直接写！不用类！不用 companion object！</strong></p>
+<h3 id="3-怎么用？直接调用！"><a href="#3-怎么用？直接调用！" class="headerlink" title="3. 怎么用？直接调用！"></a>3. 怎么用？直接调用！</h3><p>任何地方，直接写函数名：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">val result = isEmpty(&quot;hello&quot;)</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>不需要类名！不需要对象！</strong></p>
+<p>这就是<strong>顶层函数</strong>的威力！</p>
+<hr>
+<h1 id="15-高阶函数-Lambda（Net-框架大量使用）"><a href="#15-高阶函数-Lambda（Net-框架大量使用）" class="headerlink" title="15. 高阶函数 &amp; Lambda（Net 框架大量使用）"></a>15. 高阶函数 &amp; Lambda（Net 框架大量使用）</h1><h3 id="高阶函数-Lambda"><a href="#高阶函数-Lambda" class="headerlink" title="高阶函数 &amp; Lambda"></a>高阶函数 &amp; Lambda</h3><p>看完就能彻底看懂你项目里这种代码：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">NetConfig.initialize(Api.HOST, this) &#123;</span><br><span class="line">    connectTimeout(30, TimeUnit.SECONDS)</span><br><span class="line">    setDebug(true)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="先一句人话总结（必须背下来）"><a href="#先一句人话总结（必须背下来）" class="headerlink" title="先一句人话总结（必须背下来）"></a>先一句人话总结（必须背下来）</h3><ol>
+<li><strong>Lambda</strong> &#x3D; 一段可以传递的<strong>代码块</strong>（一堆要执行的逻辑）</li>
+<li><strong>高阶函数</strong> &#x3D; <strong>可以把 Lambda 当作参数传进去的函数</strong></li>
+</ol>
+<blockquote>
+<p>合起来就是：<strong>把一段代码，当成参数，传给另一个函数。</strong></p>
+</blockquote>
+<h3 id="一、先讲-Lambda：什么是代码块？"><a href="#一、先讲-Lambda：什么是代码块？" class="headerlink" title="一、先讲 Lambda：什么是代码块？"></a>一、先讲 Lambda：什么是代码块？</h3><blockquote>
+<p>Lambda 就是：<strong>一段代码，我先不执行，打包起来，传给别人，让别人帮我执行。</strong></p>
+</blockquote>
+<p>长得像这样：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    // 这里面随便写代码</span><br><span class="line">    println(&quot;我是 Lambda 代码块&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>你可以把它理解成：<strong>一个没有名字的方法</strong>。</p>
+<h3 id="二、高阶函数：什么叫-“函数能接收代码块当参数”？"><a href="#二、高阶函数：什么叫-“函数能接收代码块当参数”？" class="headerlink" title="二、高阶函数：什么叫 “函数能接收代码块当参数”？"></a>二、高阶函数：什么叫 “函数能接收代码块当参数”？</h3><blockquote>
+<p>正常函数只能传：数字、字符串、对象</p>
+</blockquote>
+<p>比如：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fun setDebug(enable: Boolean) &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>只能传 <code>true</code> &#x2F; <code>false</code></p>
+<blockquote>
+<p>高阶函数可以传：一段代码！</p>
+</blockquote>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fun 初始化Net( host: String, 代码块: () -&gt; Unit ) &#123;</span><br><span class="line">    // 函数内部可以执行这段代码</span><br><span class="line">    代码块()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>这里的 <code>() -&gt; Unit</code> 意思就是：<strong>接收一个 Lambda 代码块</strong></p>
+<h3 id="三、Java-对比"><a href="#三、Java-对比" class="headerlink" title="三、Java 对比"></a>三、Java 对比</h3><p>Java 里要实现 “传一段代码”，必须写<strong>接口 + 匿名内部类</strong>：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public interface NetCallback &#123;  // 接口</span><br><span class="line">    void onConfig();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public void initNet(String host, NetCallback callback) &#123;</span><br><span class="line">    callback.onConfig();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>调用：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">initNet(&quot;https://xxx.com&quot;, new NetCallback() &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void onConfig() &#123;</span><br><span class="line">        // 这里就是配置代码</span><br><span class="line">        setConnectTimeout(30);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="Kotlin-高阶函数-Lambda-简化成这样："><a href="#Kotlin-高阶函数-Lambda-简化成这样：" class="headerlink" title="Kotlin 高阶函数 + Lambda 简化成这样："></a>Kotlin 高阶函数 + Lambda 简化成这样：</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fun initNet(host: String, block: () -&gt; Unit) &#123;</span><br><span class="line">    block()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>调用：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">initNet(&quot;https://xxx.com&quot;) &#123;</span><br><span class="line">    // 这就是 Lambda！</span><br><span class="line">    setConnectTimeout(30)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>一模一样的功能，代码少了 80%</strong></p>
+<h3 id="Lambda-最常用的语法糖！——尾随-Lambda"><a href="#Lambda-最常用的语法糖！——尾随-Lambda" class="headerlink" title="Lambda 最常用的语法糖！——尾随 Lambda"></a>Lambda <strong>最常用的语法糖</strong>！——尾随 Lambda</h3><blockquote>
+<p><strong>如果一个函数的最后一个参数是 Lambda，那么这个 Lambda 可以 写在括号 ( ) 的外面！</strong>这是 Kotlin 官方规定的语法！</p>
+</blockquote>
+<h4 id="例如：下面这个"><a href="#例如：下面这个" class="headerlink" title="例如：下面这个"></a>例如：下面这个</h4><p><code>initialize</code> 函数大概是这样定义的：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">fun initialize(</span><br><span class="line">    host: String,</span><br><span class="line">    context: Context,</span><br><span class="line">    config: () -&gt; Unit   // 👈 最后一个参数是 Lambda</span><br><span class="line">) &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>最后一个参数是 Lambda</strong></p>
+<hr>
+<h4 id="正常写法（写在括号里）"><a href="#正常写法（写在括号里）" class="headerlink" title="正常写法（写在括号里）"></a>正常写法（写在括号里）</h4><p>按照规矩，你应该这样写：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">NetConfig.initialize(</span><br><span class="line">    Api.HOST,</span><br><span class="line">    this,</span><br><span class="line">    &#123;  // Lambda 写在括号里</span><br><span class="line">        connectTimeout(30)</span><br><span class="line">        readTimeout(30)</span><br><span class="line">    &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure></div>
+
+<p>✅ 正确；❌ 但是 <strong>丑、乱、难看</strong></p>
+<h4 id="第三步：Kotlin-允许你【最后一个-Lambda-移到括号外面】"><a href="#第三步：Kotlin-允许你【最后一个-Lambda-移到括号外面】" class="headerlink" title="第三步：Kotlin 允许你【最后一个 Lambda 移到括号外面】"></a>第三步：Kotlin 允许你【最后一个 Lambda 移到括号外面】</h4><p>于是变成这样：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">NetConfig.initialize(Api.HOST, this) &#123;</span><br><span class="line">    // Lambda 写在括号外面！</span><br><span class="line">    connectTimeout(30)</span><br><span class="line">    readTimeout(30)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="16-空安全"><a href="#16-空安全" class="headerlink" title="16. 空安全 ?"></a>16. 空安全 ?</h2><p><strong>语法说明</strong>：Kotlin 强制空安全，避免Java中的NullPointerException（空指针崩溃），通过“?”声明可空类型，“?. ”安全调用，“!!”强制非空（慎用）。</p>
+<p><strong>Java 写法</strong>：</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Java 可直接赋值null，调用方法易崩溃</span></span><br><span class="line"><span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line"><span class="comment">// 直接调用会报空指针</span></span><br><span class="line"><span class="type">int</span> <span class="variable">length</span> <span class="operator">=</span> name.length(); <span class="comment">// 崩溃！NullPointerException</span></span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Kotlin 写法</strong>：</p>
+<div class="highlight-container" data-rel="Kotlin"><figure class="iseeu highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. ? 声明可空类型（允许赋值null）</span></span><br><span class="line"><span class="keyword">val</span> name: String? = <span class="literal">null</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 2. ?. 安全调用：不为null才执行，为null返回null</span></span><br><span class="line"><span class="keyword">val</span> length = name?.length() <span class="comment">// 不会崩溃，返回null</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 3. !! 强制非空：确认不为null时使用，为null会崩溃（慎用）</span></span><br><span class="line"><span class="keyword">val</span> length2 = name!!.length()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 4. ?: 空合并运算符：为null时使用默认值</span></span><br><span class="line"><span class="keyword">val</span> newName = name ?: <span class="string">&quot;未知名称&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Android 实战场景</strong>：Activity&#x2F;Fragment中获取View（可能为null）、Intent传递数据（可能为null）、网络请求返回数据（可能为null）。</p>
+<h2 id="17-函数简化写法"><a href="#17-函数简化写法" class="headerlink" title="17. 函数简化写法"></a>17. 函数简化写法</h2><p><strong>语法说明</strong>：Kotlin 简化函数定义，单表达式函数可省略大括号和return，参数可设置默认值，减少冗余代码。</p>
+<p><strong>Java 写法</strong>：</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Java 必须写完整方法体和return</span></span><br><span class="line"><span class="keyword">public</span> <span class="type">int</span> <span class="title function_">add</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 重载方法（设置默认值需单独写）</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setUser</span><span class="params">(String name)</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>.setName(name, <span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setUser</span><span class="params">(String name, <span class="type">int</span> age)</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>.name = name;</span><br><span class="line">    <span class="built_in">this</span>.age = age;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Kotlin 写法</strong>：</p>
+<div class="highlight-container" data-rel="Kotlin"><figure class="iseeu highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. 单表达式函数：省略大括号和return，直接用=连接</span></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">add</span><span class="params">(a: <span class="type">Int</span>, b: <span class="type">Int</span>)</span></span> = a + b</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2. 参数默认值：无需写重载方法</span></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">setUser</span><span class="params">(name: <span class="type">String</span> = <span class="string">&quot;佚名&quot;</span>, age: <span class="type">Int</span> = <span class="number">0</span>)</span></span> &#123;</span><br><span class="line">    <span class="comment">// 方法体</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Android 实战场景</strong>：工具类方法（如计算、判空）、ViewModel中简单方法、接口参数配置（如Net框架超时设置）。</p>
+<h2 id="其他：补充高频语法点（实战必备）"><a href="#其他：补充高频语法点（实战必备）" class="headerlink" title="其他：补充高频语法点（实战必备）"></a>其他：补充高频语法点（实战必备）</h2><h3 id="11-数据类-data-class"><a href="#11-数据类-data-class" class="headerlink" title="11. 数据类 data class"></a>11. 数据类 data class</h3><p><strong>语法说明</strong>：专门用于存储数据的类，Kotlin自动生成getter&#x2F;setter、toString()、equals()、hashCode()、copy()方法，无需手动编写，简化实体类代码。</p>
+<p><strong>Java 写法</strong>：</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Java 实体类需手动写getter/setter、toString等</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">User</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> age;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">User</span><span class="params">(String name, <span class="type">int</span> age)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">        <span class="built_in">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 手动写getter/setter</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getName</span><span class="params">()</span> &#123; <span class="keyword">return</span> name; &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setName</span><span class="params">(String name)</span> &#123; <span class="built_in">this</span>.name = name; &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">getAge</span><span class="params">()</span> &#123; <span class="keyword">return</span> age; &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setAge</span><span class="params">(<span class="type">int</span> age)</span> &#123; <span class="built_in">this</span>.age = age; &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 手动写toString</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">toString</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;User&#123;name=&#x27;&quot;</span> + name + <span class="string">&quot;&#x27;, age=&quot;</span> + age + <span class="string">&quot;&#125;&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Kotlin 写法</strong>：</p>
+<div class="highlight-container" data-rel="Kotlin"><figure class="iseeu highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// data class 自动生成所有辅助方法</span></span><br><span class="line"><span class="keyword">data</span> <span class="keyword">class</span> <span class="title class_">User</span>(</span><br><span class="line">    <span class="keyword">val</span> name: String, <span class="comment">// 只读</span></span><br><span class="line">    <span class="keyword">var</span> age: <span class="built_in">Int</span>      <span class="comment">// 可读写</span></span><br><span class="line">)</span><br><span class="line"><span class="comment">// 自动可用方法</span></span><br><span class="line"><span class="keyword">val</span> user1 = User(<span class="string">&quot;张三&quot;</span>, <span class="number">20</span>)</span><br><span class="line"><span class="keyword">val</span> user2 = user1.copy(age = <span class="number">21</span>) <span class="comment">// copy方法</span></span><br><span class="line">println(user1.toString()) <span class="comment">// 自动生成toString</span></span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Android 实战场景</strong>：网络请求返回实体类（如User、Article）、RecyclerView数据源、Intent传递数据的实体。</p>
+<h3 id="12-延迟初始化-lateinit-var"><a href="#12-延迟初始化-lateinit-var" class="headerlink" title="12. 延迟初始化 lateinit var"></a>12. 延迟初始化 lateinit var</h3><p><strong>语法说明</strong>：Kotlin 要求变量必须初始化，lateinit var 用于“延迟初始化”，声明变量时不赋值，保证后续会赋值（使用前未赋值会崩溃），仅适用于var（可变变量）、非基本类型。</p>
+<p><strong>Java 写法</strong>：</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Java 可声明变量不赋值，默认null</span></span><br><span class="line"><span class="keyword">private</span> TextView tvName;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">onCreate</span><span class="params">(Bundle savedInstanceState)</span> &#123;</span><br><span class="line">    <span class="built_in">super</span>.onCreate(savedInstanceState);</span><br><span class="line">    tvName = findViewById(R.id.tv_name); <span class="comment">// 后续赋值</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Kotlin 写法</strong>：</p>
+<div class="highlight-container" data-rel="Kotlin"><figure class="iseeu highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// lateinit 声明延迟初始化，后续赋值</span></span><br><span class="line"><span class="keyword">lateinit</span> <span class="keyword">var</span> tvName: TextView</span><br><span class="line"></span><br><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onCreate</span><span class="params">(savedInstanceState: <span class="type">Bundle</span>?)</span></span> &#123;</span><br><span class="line">    <span class="keyword">super</span>.onCreate(savedInstanceState)</span><br><span class="line">    tvName = findViewById(R.id.tv_name) <span class="comment">// 必须赋值，否则使用时崩溃</span></span><br><span class="line">    tvName.text = <span class="string">&quot;Hello Kotlin&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Android 实战场景</strong>：Activity&#x2F;Fragment中声明View控件、ViewModel中声明网络接口实例、全局变量延迟初始化。</p>
+<h3 id="13-懒加载-by-lazy"><a href="#13-懒加载-by-lazy" class="headerlink" title="13. 懒加载 by lazy"></a>13. 懒加载 by lazy</h3><p><strong>语法说明</strong>：用于“懒加载”，变量第一次被使用时才初始化，仅适用于val（只读变量），线程安全，避免提前初始化造成的资源浪费。</p>
+<p><strong>Java 写法</strong>：</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Java 懒加载需手动判断，线程安全需加锁</span></span><br><span class="line"><span class="keyword">private</span> User user;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> User <span class="title function_">getUser</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (user == <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">synchronized</span> (<span class="built_in">this</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (user == <span class="literal">null</span>) &#123;</span><br><span class="line">                user = <span class="keyword">new</span> <span class="title class_">User</span>(<span class="string">&quot;张三&quot;</span>, <span class="number">20</span>); <span class="comment">// 第一次使用时初始化</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> user;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Kotlin 写法</strong>：</p>
+<div class="highlight-container" data-rel="Kotlin"><figure class="iseeu highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// by lazy 自动实现懒加载，线程安全</span></span><br><span class="line"><span class="keyword">val</span> user: User <span class="keyword">by</span> lazy &#123;</span><br><span class="line">    <span class="comment">// 第一次使用时执行这段代码，后续复用结果</span></span><br><span class="line">    User(<span class="string">&quot;张三&quot;</span>, <span class="number">20</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 调用（第一次调用时初始化）</span></span><br><span class="line">println(user.name)</span><br><span class="line"><span class="comment">// 第二次调用，直接复用已初始化的user</span></span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Android 实战场景</strong>：ViewModel实例初始化、网络接口实例（Api）、工具类实例、大对象（避免启动时初始化耗时）。</p>
+<h3 id="14-空合并运算符"><a href="#14-空合并运算符" class="headerlink" title="14. 空合并运算符 ?:"></a>14. 空合并运算符 ?:</h3><p><strong>语法说明</strong>：简化空值判断，语法为“变量 ?: 默认值”，当变量为null时，返回默认值；不为null时，返回变量本身，替代Java的三目运算符（?:）。</p>
+<p><strong>Java 写法</strong>：</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Java 三目运算符判断空值</span></span><br><span class="line"><span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line"><span class="type">String</span> <span class="variable">newName</span> <span class="operator">=</span> (name != <span class="literal">null</span>) ? name : <span class="string">&quot;未知用户&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 多层空值判断（繁琐）</span></span><br><span class="line"><span class="type">String</span> <span class="variable">nickName</span> <span class="operator">=</span> user != <span class="literal">null</span> ? (user.nickName != <span class="literal">null</span> ? user.nickName : <span class="string">&quot;佚名&quot;</span>) : <span class="string">&quot;佚名&quot;</span>;</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Kotlin 写法</strong>：</p>
+<div class="highlight-container" data-rel="Kotlin"><figure class="iseeu highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. 基础用法：变量为null返回默认值</span></span><br><span class="line"><span class="keyword">val</span> name: String? = <span class="literal">null</span></span><br><span class="line"><span class="keyword">val</span> newName = name ?: <span class="string">&quot;未知用户&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 2. 多层空值判断（简化）</span></span><br><span class="line"><span class="keyword">val</span> nickName = user?.nickName ?: <span class="string">&quot;佚名&quot;</span></span><br><span class="line"><span class="comment">// 解释：user不为null → 取user.nickName；user为null 或 user.nickName为null → 返回&quot;佚名&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Android 实战场景</strong>：接口返回数据判空（如用户昵称、头像地址）、Intent传递数据判空、View文本赋值（避免空指针）。</p>
+<h3 id="15-字符串模板"><a href="#15-字符串模板" class="headerlink" title="15. 字符串模板 $"></a>15. 字符串模板 $</h3><p><strong>语法说明</strong>：简化字符串拼接，用“$变量名”引用变量，用“${表达式}”引用表达式，替代Java的“+”拼接，代码更简洁、易读。</p>
+<p><strong>Java 写法</strong>：</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Java 用+拼接字符串，繁琐且易出错</span></span><br><span class="line"><span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> <span class="string">&quot;张三&quot;</span>;</span><br><span class="line"><span class="type">int</span> <span class="variable">age</span> <span class="operator">=</span> <span class="number">20</span>;</span><br><span class="line"><span class="type">String</span> <span class="variable">info</span> <span class="operator">=</span> <span class="string">&quot;我是&quot;</span> + name + <span class="string">&quot;，今年&quot;</span> + (age + <span class="number">1</span>) + <span class="string">&quot;岁&quot;</span>;</span><br><span class="line"><span class="comment">// 拼接多个变量时，代码混乱</span></span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Kotlin 写法</strong>：</p>
+<div class="highlight-container" data-rel="Kotlin"><figure class="iseeu highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> name = <span class="string">&quot;张三&quot;</span></span><br><span class="line"><span class="keyword">val</span> age = <span class="number">20</span></span><br><span class="line"><span class="comment">// $引用变量，$&#123;&#125;引用表达式</span></span><br><span class="line"><span class="keyword">val</span> info = <span class="string">&quot;我是<span class="variable">$name</span>，今年<span class="subst">$&#123;age + <span class="number">1</span>&#125;</span>岁&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 实战常用：拼接接口地址、日志信息</span></span><br><span class="line"><span class="keyword">val</span> userId = <span class="number">1001</span></span><br><span class="line"><span class="keyword">val</span> url = <span class="string">&quot;<span class="subst">$&#123;Api.HOST&#125;</span>/user/<span class="variable">$userId</span>/detail&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Android 实战场景</strong>：日志打印、接口地址拼接、Toast提示文本、TextView文本赋值。</p>
+<h3 id="16-单例-object（饿汉式）"><a href="#16-单例-object（饿汉式）" class="headerlink" title="16. 单例 object（饿汉式）"></a>16. 单例 object（饿汉式）</h3><p><strong>语法说明</strong>：Kotlin 简化单例写法，用object关键字声明单例类，自动生成唯一实例，无需手动写构造方法、双重校验，属于饿汉式单例（启动时初始化）。</p>
+<p><strong>Java 写法</strong>：</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Java 饿汉式单例</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">AppConfig</span> &#123;</span><br><span class="line">    <span class="comment">// 私有构造，禁止外部创建</span></span><br><span class="line">    <span class="keyword">private</span> <span class="title function_">AppConfig</span><span class="params">()</span> &#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 静态唯一实例</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">AppConfig</span> <span class="variable">INSTANCE</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">AppConfig</span>();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 提供静态方法获取实例</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> AppConfig <span class="title function_">getInstance</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> INSTANCE;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 单例中的属性和方法</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">String</span> <span class="variable">token</span> <span class="operator">=</span> <span class="string">&quot;xxx&quot;</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">printToken</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(token);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Kotlin 写法</strong>：</p>
+<div class="highlight-container" data-rel="Kotlin"><figure class="iseeu highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// object 直接声明单例，自动生成唯一实例</span></span><br><span class="line"><span class="keyword">object</span> AppConfig &#123;</span><br><span class="line">    <span class="comment">// 单例中的属性和方法，直接定义</span></span><br><span class="line">    <span class="keyword">val</span> token = <span class="string">&quot;xxx&quot;</span></span><br><span class="line">    <span class="function"><span class="keyword">fun</span> <span class="title">printToken</span><span class="params">()</span></span> &#123;</span><br><span class="line">        println(token)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 调用：直接用类名调用，无需获取实例</span></span><br><span class="line">AppConfig.token</span><br><span class="line">AppConfig.printToken()</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Android 实战场景</strong>：全局配置类（如AppConfig）、工具类（如ToastUtil、LogUtil）、网络接口单例（Api实例）。</p>
+<h3 id="17-集合简化（mutableListOf-mutableMapOf）"><a href="#17-集合简化（mutableListOf-mutableMapOf）" class="headerlink" title="17. 集合简化（mutableListOf &#x2F; mutableMapOf）"></a>17. 集合简化（mutableListOf &#x2F; mutableMapOf）</h3><p><strong>语法说明</strong>：Kotlin 简化集合创建，提供mutableListOf（可变列表）、mutableMapOf（可变Map）、listOf（不可变列表）、mapOf（不可变Map），无需手动new，语法更简洁。</p>
+<p><strong>Java 写法</strong>：</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Java 创建可变列表</span></span><br><span class="line">List&lt;String&gt; list = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">list.add(<span class="string">&quot;张三&quot;</span>);</span><br><span class="line">list.add(<span class="string">&quot;李四&quot;</span>);</span><br><span class="line">list.remove(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Java 创建可变Map</span></span><br><span class="line">Map&lt;String, String&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">map.put(<span class="string">&quot;name&quot;</span>, <span class="string">&quot;张三&quot;</span>);</span><br><span class="line">map.put(<span class="string">&quot;age&quot;</span>, <span class="string">&quot;20&quot;</span>);</span><br><span class="line"><span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> map.get(<span class="string">&quot;name&quot;</span>);</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Kotlin 写法</strong>：</p>
+<div class="highlight-container" data-rel="Kotlin"><figure class="iseeu highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. 可变列表（可增删改）</span></span><br><span class="line"><span class="keyword">val</span> list = mutableListOf&lt;String&gt;()</span><br><span class="line">list.add(<span class="string">&quot;张三&quot;</span>)</span><br><span class="line">list.add(<span class="string">&quot;李四&quot;</span>)</span><br><span class="line">list.removeAt(<span class="number">0</span>) <span class="comment">// 按索引删除</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 简化初始化</span></span><br><span class="line"><span class="keyword">val</span> list2 = mutableListOf(<span class="string">&quot;张三&quot;</span>, <span class="string">&quot;李四&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2. 可变Map（可增删改）</span></span><br><span class="line"><span class="keyword">val</span> map = mutableMapOf&lt;String, String&gt;()</span><br><span class="line">map[<span class="string">&quot;name&quot;</span>] = <span class="string">&quot;张三&quot;</span> <span class="comment">// 简化put</span></span><br><span class="line">map[<span class="string">&quot;age&quot;</span>] = <span class="string">&quot;20&quot;</span></span><br><span class="line"><span class="keyword">val</span> name = map[<span class="string">&quot;name&quot;</span>] <span class="comment">// 简化get</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 简化初始化</span></span><br><span class="line"><span class="keyword">val</span> map2 = mutableMapOf(<span class="string">&quot;name&quot;</span> to <span class="string">&quot;张三&quot;</span>, <span class="string">&quot;age&quot;</span> to <span class="string">&quot;20&quot;</span>)</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Android 实战场景</strong>：RecyclerView数据源（列表）、接口请求参数（Map）、存储临时数据（如多选列表）。</p>
+<h3 id="18-循环简化（for-in）"><a href="#18-循环简化（for-in）" class="headerlink" title="18. 循环简化（for-in）"></a>18. 循环简化（for-in）</h3><p><strong>语法说明</strong>：Kotlin 简化循环写法，用for-in循环遍历集合、范围，替代Java的for循环（普通for、增强for），代码更简洁。</p>
+<p><strong>Java 写法</strong>：</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Java 增强for遍历集合</span></span><br><span class="line">List&lt;User&gt; userList = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line"><span class="keyword">for</span> (User user : userList) &#123;</span><br><span class="line">    System.out.println(user.name);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Java 普通for遍历范围</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">    System.out.println(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Kotlin 写法</strong>：</p>
+<div class="highlight-container" data-rel="Kotlin"><figure class="iseeu highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. 遍历集合（等价Java增强for）</span></span><br><span class="line"><span class="keyword">val</span> userList = mutableListOf(User(<span class="string">&quot;张三&quot;</span>, <span class="number">20</span>), User(<span class="string">&quot;李四&quot;</span>, <span class="number">21</span>))</span><br><span class="line"><span class="keyword">for</span> (user <span class="keyword">in</span> userList) &#123;</span><br><span class="line">    println(user.name)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2. 遍历范围（0..9 表示0到9，包含9）</span></span><br><span class="line"><span class="keyword">for</span> (i <span class="keyword">in</span> <span class="number">0.</span><span class="number">.9</span>) &#123;</span><br><span class="line">    println(i)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 3. 遍历集合索引（获取索引和元素）</span></span><br><span class="line"><span class="keyword">for</span> ((index, user) <span class="keyword">in</span> userList.withIndex()) &#123;</span><br><span class="line">    println(<span class="string">&quot;索引：<span class="variable">$index</span>，姓名：<span class="subst">$&#123;user.name&#125;</span>&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 4. 倒序遍历</span></span><br><span class="line"><span class="keyword">for</span> (i <span class="keyword">in</span> <span class="number">9</span> downTo <span class="number">0</span>) &#123;</span><br><span class="line">    println(i)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Android 实战场景</strong>：RecyclerView数据源遍历、批量处理数据（如批量设置View属性）、倒计时循环。</p>
+<h3 id="19-let-函数（空安全简化）"><a href="#19-let-函数（空安全简化）" class="headerlink" title="19. let 函数（空安全简化）"></a>19. let 函数（空安全简化）</h3><p><strong>语法说明</strong>：Kotlin 标准函数，用于简化空值判断和变量作用域，语法为“变量?.let { 代码块 }”，变量不为null时才执行代码块，代码块中用it指代变量本身。</p>
+<p><strong>Java 写法</strong>：</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Java 空值判断，嵌套繁琐</span></span><br><span class="line"><span class="type">User</span> <span class="variable">user</span> <span class="operator">=</span> getUser();</span><br><span class="line"><span class="keyword">if</span> (user != <span class="literal">null</span>) &#123;</span><br><span class="line">    System.out.println(user.name);</span><br><span class="line">    <span class="keyword">if</span> (user.age &gt; <span class="number">18</span>) &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;成年人&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Kotlin 写法</strong>：</p>
+<div class="highlight-container" data-rel="Kotlin"><figure class="iseeu highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> user: User? = getUser()</span><br><span class="line"><span class="comment">// let 简化空值判断，it 指代user</span></span><br><span class="line">user?.let &#123;</span><br><span class="line">    println(it.name) <span class="comment">// it = user</span></span><br><span class="line">    <span class="keyword">if</span> (it.age &gt; <span class="number">18</span>) &#123;</span><br><span class="line">        println(<span class="string">&quot;成年人&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 实战常用：View判空后设置属性</span></span><br><span class="line">tvName?.let &#123;</span><br><span class="line">    it.text = <span class="string">&quot;Hello&quot;</span></span><br><span class="line">    it.textSize = <span class="number">16f</span></span><br><span class="line">    it.setTextColor(Color.BLACK)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Android 实战场景</strong>：View判空后设置属性、接口返回数据判空后处理、临时变量作用域限制。</p>
+<h3 id="20-apply-函数（对象配置简化）"><a href="#20-apply-函数（对象配置简化）" class="headerlink" title="20. apply 函数（对象配置简化）"></a>20. apply 函数（对象配置简化）</h3><p><strong>语法说明</strong>：Kotlin 标准函数，用于简化对象初始化和配置，语法为“对象.apply { 代码块 }”，代码块中用this指代对象本身，最终返回对象本身，适合链式调用。</p>
+<p><strong>Java 写法</strong>：</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Java 初始化对象并设置属性，需重复写对象名</span></span><br><span class="line"><span class="type">TextView</span> <span class="variable">tvName</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">TextView</span>(<span class="built_in">this</span>);</span><br><span class="line">tvName.setText(<span class="string">&quot;Hello&quot;</span>);</span><br><span class="line">tvName.setTextSize(<span class="number">16f</span>);</span><br><span class="line">tvName.setTextColor(Color.BLACK);</span><br><span class="line">tvName.setOnClickListener(v -&gt; &#123;</span><br><span class="line">    <span class="comment">// 点击事件</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Kotlin 写法</strong>：</p>
+<div class="highlight-container" data-rel="Kotlin"><figure class="iseeu highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// apply 简化对象配置，this 指代TextView</span></span><br><span class="line"><span class="keyword">val</span> tvName = TextView(<span class="keyword">this</span>).apply &#123;</span><br><span class="line">    text = <span class="string">&quot;Hello&quot;</span></span><br><span class="line">    textSize = <span class="number">16f</span></span><br><span class="line">    setTextColor(Color.BLACK)</span><br><span class="line">    setOnClickListener &#123;</span><br><span class="line">        <span class="comment">// 点击事件</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 实战常用：Net请求配置</span></span><br><span class="line"><span class="keyword">val</span> request = Get&lt;User&gt;(<span class="string">&quot;/user/detail&quot;</span>).apply &#123;</span><br><span class="line">    param(<span class="string">&quot;userId&quot;</span>, <span class="number">1001</span>)</span><br><span class="line">    timeout(<span class="number">30</span>, TimeUnit.SECONDS)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Android 实战场景</strong>：View初始化配置、网络请求参数配置、对象初始化（如Dialog、Intent）。</p>
+<h3 id="21-密封类-sealed-class（MVVM状态管理）"><a href="#21-密封类-sealed-class（MVVM状态管理）" class="headerlink" title="21. 密封类 sealed class（MVVM状态管理）"></a>21. 密封类 sealed class（MVVM状态管理）</h3><p><strong>语法说明</strong>：密封类是“受限的类继承结构”，子类必须定义在密封类内部或同一文件中，不能在其他文件中继承，常用于表示固定的状态集合（如加载状态、接口返回状态）。</p>
+<p><strong>Java 写法</strong>：</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Java 用接口+多个实现类表示状态，无限制，易混乱</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">UiState</span> &#123;&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Loading</span> <span class="keyword">implements</span> <span class="title class_">UiState</span> &#123;&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Success</span> <span class="keyword">implements</span> <span class="title class_">UiState</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> User data;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Success</span><span class="params">(User data)</span> &#123; <span class="built_in">this</span>.data = data; &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Error</span> <span class="keyword">implements</span> <span class="title class_">UiState</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> String msg;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Error</span><span class="params">(String msg)</span> &#123; <span class="built_in">this</span>.msg = msg; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Kotlin 写法</strong>：</p>
+<div class="highlight-container" data-rel="Kotlin"><figure class="iseeu highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 密封类，子类必须在内部或同一文件</span></span><br><span class="line"><span class="keyword">sealed</span> <span class="keyword">class</span> <span class="title class_">UiState</span> &#123;</span><br><span class="line">    <span class="comment">// 加载中状态（无数据）</span></span><br><span class="line">    <span class="keyword">object</span> Loading : UiState()</span><br><span class="line">    <span class="comment">// 成功状态（带数据）</span></span><br><span class="line">    <span class="keyword">data</span> <span class="keyword">class</span> <span class="title class_">Success</span>(<span class="keyword">val</span> <span class="keyword">data</span>: User) : UiState()</span><br><span class="line">    <span class="comment">// 失败状态（带错误信息）</span></span><br><span class="line">    <span class="keyword">data</span> <span class="keyword">class</span> <span class="title class_">Error</span>(<span class="keyword">val</span> msg: String) : UiState()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 实战使用（when 自动匹配所有状态，无需else）</span></span><br><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">handleState</span><span class="params">(state: <span class="type">UiState</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">when</span> (state) &#123;</span><br><span class="line">        <span class="keyword">is</span> UiState.Loading -&gt; showLoading()</span><br><span class="line">        <span class="keyword">is</span> UiState.Success -&gt; showData(state.<span class="keyword">data</span>)</span><br><span class="line">        <span class="keyword">is</span> UiState.Error -&gt; showError(state.msg)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Android 实战场景</strong>：MVVM架构中View状态管理（加载中&#x2F;成功&#x2F;失败）、接口返回状态处理、RecyclerView列表状态（空数据&#x2F;加载失败&#x2F;正常）。</p>
+<h3 id="22-协程-Coroutine（异步处理）"><a href="#22-协程-Coroutine（异步处理）" class="headerlink" title="22. 协程 Coroutine（异步处理）"></a>22. 协程 Coroutine（异步处理）</h3><p><strong>语法说明</strong>：Kotlin 协程是“轻量级线程”，用于简化异步操作（如网络请求、文件读写），替代Java的Thread、Handler、AsyncTask，代码同步化编写，避免回调地狱。</p>
+<p><strong>Java 写法</strong>：</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Java 异步网络请求，需用Thread+Handler，回调繁琐</span></span><br><span class="line"><span class="keyword">new</span> <span class="title class_">Thread</span>(<span class="keyword">new</span> <span class="title class_">Runnable</span>() &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="comment">// 子线程执行网络请求</span></span><br><span class="line">        <span class="type">User</span> <span class="variable">user</span> <span class="operator">=</span> api.getUser();</span><br><span class="line">        <span class="comment">// 切换到主线程更新UI</span></span><br><span class="line">        runOnUiThread(<span class="keyword">new</span> <span class="title class_">Runnable</span>() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">                tvName.setText(user.name);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;).start();</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Kotlin 写法</strong>：</p>
+<div class="highlight-container" data-rel="Kotlin"><figure class="iseeu highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 协程简化异步操作，同步化编写</span></span><br><span class="line">lifecycleScope.launch &#123; <span class="comment">// Activity/Fragment 生命周期协程，自动销毁</span></span><br><span class="line">    <span class="comment">// 子线程执行网络请求（withContext 切换线程）</span></span><br><span class="line">    <span class="keyword">val</span> user = withContext(Dispatchers.IO) &#123;</span><br><span class="line">        api.getUser() <span class="comment">// Net框架接口，自动适配协程</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 自动切换到主线程，更新UI</span></span><br><span class="line">    tvName.text = user.name</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 项目中Net框架协程使用（简化版）</span></span><br><span class="line">lifecycleScope.launch &#123;</span><br><span class="line">    <span class="keyword">val</span> user = Get&lt;User&gt;(<span class="string">&quot;/user/detail&quot;</span>).await() <span class="comment">// await() 等待请求结果</span></span><br><span class="line">    tvName.text = user.name</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Android 实战场景</strong>：网络请求、文件读写、数据库操作、耗时操作（避免主线程阻塞）。</p>
+<h3 id="23-类型强转-as-as"><a href="#23-类型强转-as-as" class="headerlink" title="23. 类型强转 as &#x2F; as?"></a>23. 类型强转 as &#x2F; as?</h3><p><strong>语法说明</strong>：用于将一个类型转换为另一个类型，as 是“强制强转”（转换失败会崩溃），as? 是“安全强转”（转换失败返回null），替代Java的(目标类型)变量。</p>
+<p><strong>Java 写法</strong>：</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Java 强制强转，类型不匹配会崩溃</span></span><br><span class="line"><span class="type">Object</span> <span class="variable">obj</span> <span class="operator">=</span> <span class="string">&quot;Hello&quot;</span>;</span><br><span class="line"><span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> (String) obj;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 安全强转需手动判断</span></span><br><span class="line"><span class="keyword">if</span> (obj <span class="keyword">instanceof</span> String) &#123;</span><br><span class="line">    <span class="type">String</span> <span class="variable">str2</span> <span class="operator">=</span> (String) obj;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    str2 = <span class="literal">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Kotlin 写法</strong>：</p>
+<div class="highlight-container" data-rel="Kotlin"><figure class="iseeu highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> obj: Any = <span class="string">&quot;Hello&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 1. as 强制强转（类型不匹配崩溃，慎用）</span></span><br><span class="line"><span class="keyword">val</span> str = obj <span class="keyword">as</span> String</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2. as? 安全强转（类型不匹配返回null，推荐）</span></span><br><span class="line"><span class="keyword">val</span> str2 = obj <span class="keyword">as</span>? String</span><br><span class="line"></span><br><span class="line"><span class="comment">// 实战常用：View强转</span></span><br><span class="line"><span class="keyword">val</span> view = findViewById(R.id.tv_name)</span><br><span class="line"><span class="keyword">val</span> tvName = view <span class="keyword">as</span>? TextView</span><br><span class="line">tvName?.text = <span class="string">&quot;Hello&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Android 实战场景</strong>：View强转（如findViewById后转具体控件）、接口返回数据强转、多态类型转换。</p>
+<h3 id="24-runCatching（异常处理简化）"><a href="#24-runCatching（异常处理简化）" class="headerlink" title="24. runCatching（异常处理简化）"></a>24. runCatching（异常处理简化）</h3><p><strong>语法说明</strong>：Kotlin 简化异常处理，runCatching 包裹可能抛出异常的代码，通过onSuccess处理成功结果，onFailure处理异常，替代Java的try-catch-finally。</p>
+<p><strong>Java 写法</strong>：</p>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Java try-catch 处理异常，代码繁琐</span></span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="comment">// 可能抛出异常的代码（如JSON解析）</span></span><br><span class="line">    <span class="type">User</span> <span class="variable">user</span> <span class="operator">=</span> JsonUtils.parseBody(json, User.class);</span><br><span class="line">    showData(user);</span><br><span class="line">&#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">    <span class="comment">// 处理异常</span></span><br><span class="line">    showError(<span class="string">&quot;解析失败&quot;</span>);</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Kotlin 写法</strong>：</p>
+<div class="highlight-container" data-rel="Kotlin"><figure class="iseeu highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// runCatching 简化异常处理</span></span><br><span class="line">runCatching &#123;</span><br><span class="line">    <span class="comment">// 可能抛出异常的代码</span></span><br><span class="line">    json.parseBody&lt;User&gt;(kType)</span><br><span class="line">&#125;.onSuccess &#123; user -&gt;</span><br><span class="line">    <span class="comment">// 成功处理</span></span><br><span class="line">    showData(user)</span><br><span class="line">&#125;.onFailure &#123; e -&gt;</span><br><span class="line">    <span class="comment">// 异常处理</span></span><br><span class="line">    showError(<span class="string">&quot;解析失败&quot;</span>)</span><br><span class="line">    e.printStackTrace()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Android 实战场景</strong>：JSON解析、网络请求异常处理、文件读写异常处理、数据库操作异常处理。</p>
+
+        </div>
+
+        
+            <div class="post-copyright-info px-2 sm:px-6 md:px-8">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> 和kotlin的初次见面🥰</li>
+        <li><strong>Author:</strong> 羽晨sir</li>
+        <li><strong>Created at
+                :</strong> 2025-03-02 18:40:49</li>
+        
+            <li>
+                <strong>Updated at
+                    :</strong> 2026-03-30 21:47:08
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://www.douyin.com/user/self?modal_id=7301289319514361127/2025/03/02/和kotlin的初次见面🥰/
+        </li>
+        <li>
+            <strong>
+                License:
+            </strong>
+            
+
+            
+                This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a>.
+            
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/%E5%AD%A6%E4%B9%A0/">#学习</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+
+        
+            <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+                
+                    <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="prev"
+                        rel="prev"
+                        href="/2025/03/26/%F0%9F%98%89MVVM%E6%9E%B6%E6%9E%84/"
+                        >
+                            <span class="left arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">😉MVVM架构</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="next"
+                        rel="next"
+                        href="/2024/08/21/%E5%8E%9F%E7%94%9F%E5%BC%80%E5%8F%91%E8%A6%81%E5%87%89%E4%BA%86%EF%BC%9FFlutter-RN-KMP-%E8%BF%99%E4%B8%89%E5%85%84%E5%BC%9F%E5%88%B0%E5%BA%95%E8%B0%81%E8%83%BD%E6%89%93/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">📱 原生开发要凉了？Flutter / RN / KMP 这三兄弟到底谁能打</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+            <div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+                <div class="comments-container pjax">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fa-solid fa-comments"></i>&nbsp;Comments
+    </div>
+    
+
+        
+            
+  <div id="waline"></div>
+  <script src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
+  <script type="module" data-swup-reload-script>
+    const params = new URLSearchParams(location.search.slice(1));
+    function loadWaline() {
+      const waline = Waline.init({
+        el: '#waline',
+        serverURL: 'https://ycomet.love/',
+        lang: params.get('zh-CN'),
+        dark: 'body[class~="dark-mode"]',
+        requiredMeta: ['nick', 'mail']
+      });
+    }
+
+    if (typeof swup !== 'undefined') {
+      loadWaline();
+    } else {
+      window.addEventListener('DOMContentLoaded', loadWaline);
+    }
+    window.addEventListener('onload', loadWaline);
+  </script>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">On this page</div>
+        <div class="page-title">和kotlin的初次见面🥰</div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E7%B1%BB%E4%B8%8E%E4%B8%BB%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%EF%BC%88%E4%BD%A0%E6%9C%80%E7%96%91%E6%83%91%E7%9A%84%E7%82%B9%EF%BC%89"><span class="nav-text">1. 类与主构造函数（你最疑惑的点）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-text">是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java-%E5%86%99%E6%B3%95"><span class="nav-text">Java 写法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Kotlin-%E5%86%99%E6%B3%95"><span class="nav-text">Kotlin 写法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E9%94%AE%E8%A7%A3%E9%87%8A"><span class="nav-text">关键解释</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E9%BB%98%E8%AE%A4%E5%8F%82%E6%95%B0"><span class="nav-text">2. 构造函数默认参数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F-1"><span class="nav-text">是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Kotlin"><span class="nav-text">Kotlin</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8"><span class="nav-text">使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java-%E5%AF%B9%E6%AF%94%EF%BC%88%E9%9D%9E%E5%B8%B8%E9%BA%BB%E7%83%A6%EF%BC%89"><span class="nav-text">Java 对比（非常麻烦）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%EF%BC%9Aval-var"><span class="nav-text">3. 变量声明：val &amp; var</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java"><span class="nav-text">Java</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Kotlin-1"><span class="nav-text">Kotlin</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%8D%E7%82%B9"><span class="nav-text">重点</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-%E7%A9%BA%E5%AE%89%E5%85%A8%EF%BC%88Java-%E6%9C%80%E5%AE%B9%E6%98%93-NPE%EF%BC%89"><span class="nav-text">4. 空安全（Java 最容易 NPE）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java-%E7%A9%BA%E6%8C%87%E9%92%88%E9%97%AE%E9%A2%98"><span class="nav-text">Java 空指针问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Kotlin-%E5%8F%AF%E7%A9%BA%E7%B1%BB%E5%9E%8B"><span class="nav-text">Kotlin 可空类型</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-%E5%87%BD%E6%95%B0%EF%BC%88%E6%96%B9%E6%B3%95%EF%BC%89%E5%AE%9A%E4%B9%89"><span class="nav-text">5. 函数（方法）定义</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java-1"><span class="nav-text">Java</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Kotlin-2"><span class="nav-text">Kotlin</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-%E9%9D%99%E6%80%81%E4%BB%A3%E7%A0%81-%E4%BC%B4%E7%94%9F%E5%AF%B9%E8%B1%A1-companion-object"><span class="nav-text">6. 静态代码 &amp; 伴生对象 companion object</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%85%88%E7%9C%8B-Java"><span class="nav-text">1. 先看 Java</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Kotlin-%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%83%BD%E7%94%A8-static%EF%BC%9F"><span class="nav-text">2. Kotlin 为什么不能用 static？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-companion-object-%E5%86%99%E6%B3%95%EF%BC%88%E6%9C%80%E5%85%B3%E9%94%AE%EF%BC%89kotlin%E4%B8%AD"><span class="nav-text">3. companion object 写法（最关键）kotlin中:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF-%E5%AE%9E%E7%8E%B0%E6%8E%A5%E5%8F%A3"><span class="nav-text">7. 类的继承 &#x2F; 实现接口</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java-2"><span class="nav-text">Java</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Kotlin-3"><span class="nav-text">Kotlin</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%8D%E7%82%B9-1"><span class="nav-text">重点</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#8-%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB-%E5%AF%B9%E8%B1%A1%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-text">8. 匿名内部类 &#x2F; 对象表达式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java-%E7%82%B9%E5%87%BB%E4%BA%8B%E4%BB%B6"><span class="nav-text">Java 点击事件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Kotlin-4"><span class="nav-text">Kotlin</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#9-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A8%A1%E6%9D%BF%EF%BC%88%E8%B6%85%E7%BA%A7%E5%A5%BD%E7%94%A8%EF%BC%89"><span class="nav-text">9. 字符串模板（超级好用）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java-3"><span class="nav-text">Java</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Kotlin-5"><span class="nav-text">Kotlin</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#10-when-%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%88%E6%9B%BF%E4%BB%A3-switch%EF%BC%89"><span class="nav-text">10. when 表达式（替代 switch）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java-4"><span class="nav-text">Java</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Kotlin-6"><span class="nav-text">Kotlin</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#11-%E6%89%A9%E5%B1%95%E5%87%BD%E6%95%B0"><span class="nav-text">11. 扩展函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E8%AF%AD%E6%B3%95%E7%BB%93%E6%9E%84"><span class="nav-text">1. 语法结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E8%B6%85%E7%BA%A7%E7%AE%80%E5%8D%95%E5%B0%8F%E4%BE%8B%E5%AD%90%EF%BC%88%E4%BD%A0%E4%B8%80%E7%9C%8B%E5%B0%B1%E4%BC%9A%EF%BC%89"><span class="nav-text">2. 超级简单小例子（你一看就会）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%99-String-%E5%8A%A0%E4%B8%80%E4%B8%AA%E6%96%B9%E6%B3%95%EF%BC%9A%E8%BD%AC%E6%88%90%E5%A4%A7%E5%86%99"><span class="nav-text">给 String 加一个方法：转成大写</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#12-%E6%B3%9B%E5%9E%8B-%E6%B3%9B%E5%9E%8B%E6%96%B9%E6%B3%95"><span class="nav-text">12. 泛型 &amp;  泛型方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%85%88%E7%9C%8B%E4%BD%A0%E6%9C%80%E7%96%91%E6%83%91%E7%9A%84%E4%BB%A3%E7%A0%81"><span class="nav-text">1. 先看你最疑惑的代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Kotlin-%E6%8F%90%E4%BE%9B"><span class="nav-text">Kotlin 提供 </span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#13-%E5%BB%B6%E8%BF%9F%E5%88%9D%E5%A7%8B%E5%8C%96-lateinit"><span class="nav-text">13. 延迟初始化 &#x2F;lateinit</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Kotlin-%E6%9C%89%E4%B8%80%E4%B8%AA%E4%B8%A5%E6%A0%BC%E8%A7%84%E5%88%99%EF%BC%9A"><span class="nav-text">1. Kotlin 有一个严格规则：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E4%BD%86%E6%9C%89%E4%BA%9B%E5%8F%98%E9%87%8F%EF%BC%8C%E6%88%91%E7%A1%AE%E5%AE%9E%E7%8E%B0%E5%9C%A8%E4%B8%8D%E8%83%BD%E8%B5%8B%E5%80%BC%EF%BC%81"><span class="nav-text">2. 但有些变量，我确实现在不能赋值！</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#14-%E9%A1%B6%E5%B1%82%E5%87%BD%E6%95%B0%EF%BC%88%E7%9B%B4%E6%8E%A5%E5%9C%A8-kt-%E6%96%87%E4%BB%B6%E9%87%8C%E5%86%99%E5%87%BD%E6%95%B0%EF%BC%8C%E4%B8%8D%E7%94%A8%E7%B1%BB%E5%8C%85%E8%A3%B9%EF%BC%89"><span class="nav-text">14. 顶层函数（直接在 kt 文件里写函数，不用类包裹）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%85%88%E7%9C%8B%E5%AF%B9%E6%AF%94%EF%BC%9AJava-%E5%BF%85%E9%A1%BB%E5%8C%85%E5%9C%A8%E7%B1%BB%E9%87%8C%EF%BC%8C%E8%B6%85%E7%BA%A7%E9%BA%BB%E7%83%A6"><span class="nav-text">1. 先看对比：Java 必须包在类里，超级麻烦</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Kotlin-%E9%A1%B6%E5%B1%82%E5%87%BD%E6%95%B0%EF%BC%9A%E7%9B%B4%E6%8E%A5%E5%86%99%EF%BC%8C%E4%B8%8D%E7%94%A8%E7%B1%BB%EF%BC%81"><span class="nav-text">2. Kotlin 顶层函数：直接写，不用类！</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BE%E4%BE%8B%EF%BC%9A%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6-StringExt-kt"><span class="nav-text">举例：新建一个文件 StringExt.kt</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E6%80%8E%E4%B9%88%E7%94%A8%EF%BC%9F%E7%9B%B4%E6%8E%A5%E8%B0%83%E7%94%A8%EF%BC%81"><span class="nav-text">3. 怎么用？直接调用！</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#15-%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0-Lambda%EF%BC%88Net-%E6%A1%86%E6%9E%B6%E5%A4%A7%E9%87%8F%E4%BD%BF%E7%94%A8%EF%BC%89"><span class="nav-text">15. 高阶函数 &amp; Lambda（Net 框架大量使用）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0-Lambda"><span class="nav-text">高阶函数 &amp; Lambda</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%88%E4%B8%80%E5%8F%A5%E4%BA%BA%E8%AF%9D%E6%80%BB%E7%BB%93%EF%BC%88%E5%BF%85%E9%A1%BB%E8%83%8C%E4%B8%8B%E6%9D%A5%EF%BC%89"><span class="nav-text">先一句人话总结（必须背下来）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%85%88%E8%AE%B2-Lambda%EF%BC%9A%E4%BB%80%E4%B9%88%E6%98%AF%E4%BB%A3%E7%A0%81%E5%9D%97%EF%BC%9F"><span class="nav-text">一、先讲 Lambda：什么是代码块？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0%EF%BC%9A%E4%BB%80%E4%B9%88%E5%8F%AB-%E2%80%9C%E5%87%BD%E6%95%B0%E8%83%BD%E6%8E%A5%E6%94%B6%E4%BB%A3%E7%A0%81%E5%9D%97%E5%BD%93%E5%8F%82%E6%95%B0%E2%80%9D%EF%BC%9F"><span class="nav-text">二、高阶函数：什么叫 “函数能接收代码块当参数”？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81Java-%E5%AF%B9%E6%AF%94"><span class="nav-text">三、Java 对比</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Kotlin-%E9%AB%98%E9%98%B6%E5%87%BD%E6%95%B0-Lambda-%E7%AE%80%E5%8C%96%E6%88%90%E8%BF%99%E6%A0%B7%EF%BC%9A"><span class="nav-text">Kotlin 高阶函数 + Lambda 简化成这样：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lambda-%E6%9C%80%E5%B8%B8%E7%94%A8%E7%9A%84%E8%AF%AD%E6%B3%95%E7%B3%96%EF%BC%81%E2%80%94%E2%80%94%E5%B0%BE%E9%9A%8F-Lambda"><span class="nav-text">Lambda 最常用的语法糖！——尾随 Lambda</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16-%E7%A9%BA%E5%AE%89%E5%85%A8"><span class="nav-text">16. 空安全 ?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-%E5%87%BD%E6%95%B0%E7%AE%80%E5%8C%96%E5%86%99%E6%B3%95"><span class="nav-text">17. 函数简化写法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%EF%BC%9A%E8%A1%A5%E5%85%85%E9%AB%98%E9%A2%91%E8%AF%AD%E6%B3%95%E7%82%B9%EF%BC%88%E5%AE%9E%E6%88%98%E5%BF%85%E5%A4%87%EF%BC%89"><span class="nav-text">其他：补充高频语法点（实战必备）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#11-%E6%95%B0%E6%8D%AE%E7%B1%BB-data-class"><span class="nav-text">11. 数据类 data class</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-%E5%BB%B6%E8%BF%9F%E5%88%9D%E5%A7%8B%E5%8C%96-lateinit-var"><span class="nav-text">12. 延迟初始化 lateinit var</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-%E6%87%92%E5%8A%A0%E8%BD%BD-by-lazy"><span class="nav-text">13. 懒加载 by lazy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14-%E7%A9%BA%E5%90%88%E5%B9%B6%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-text">14. 空合并运算符 ?:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#15-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A8%A1%E6%9D%BF"><span class="nav-text">15. 字符串模板 $</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16-%E5%8D%95%E4%BE%8B-object%EF%BC%88%E9%A5%BF%E6%B1%89%E5%BC%8F%EF%BC%89"><span class="nav-text">16. 单例 object（饿汉式）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#17-%E9%9B%86%E5%90%88%E7%AE%80%E5%8C%96%EF%BC%88mutableListOf-mutableMapOf%EF%BC%89"><span class="nav-text">17. 集合简化（mutableListOf &#x2F; mutableMapOf）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18-%E5%BE%AA%E7%8E%AF%E7%AE%80%E5%8C%96%EF%BC%88for-in%EF%BC%89"><span class="nav-text">18. 循环简化（for-in）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#19-let-%E5%87%BD%E6%95%B0%EF%BC%88%E7%A9%BA%E5%AE%89%E5%85%A8%E7%AE%80%E5%8C%96%EF%BC%89"><span class="nav-text">19. let 函数（空安全简化）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20-apply-%E5%87%BD%E6%95%B0%EF%BC%88%E5%AF%B9%E8%B1%A1%E9%85%8D%E7%BD%AE%E7%AE%80%E5%8C%96%EF%BC%89"><span class="nav-text">20. apply 函数（对象配置简化）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#21-%E5%AF%86%E5%B0%81%E7%B1%BB-sealed-class%EF%BC%88MVVM%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86%EF%BC%89"><span class="nav-text">21. 密封类 sealed class（MVVM状态管理）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#22-%E5%8D%8F%E7%A8%8B-Coroutine%EF%BC%88%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86%EF%BC%89"><span class="nav-text">22. 协程 Coroutine（异步处理）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#23-%E7%B1%BB%E5%9E%8B%E5%BC%BA%E8%BD%AC-as-as"><span class="nav-text">23. 类型强转 as &#x2F; as?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#24-runCatching%EF%BC%88%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E7%AE%80%E5%8C%96%EF%BC%89"><span class="nav-text">24. runCatching（异常处理简化）</span></a></li></ol></li></ol></li></ol>
+
+    </div>
+</div>
+        </div>
+    
+</div>
+
+
+
+                
+
+            </div>
+
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2022</span>
+              -
+            
+            2026&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">羽晨sir</a>
+        </div>
+        
+            <script data-swup-reload-script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">VISITOR COUNT</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">TOTAL PAGE VIEWS</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="#">羽晨sir</a></span>
+            <span class="text-sm lg:block">THEME&nbsp;<a class="text-base" target="_blank" href="https://github.com/aduie">GitHub</a></span>
+        </div>
+        
+            <div class="icp-info my-1"><a target="_blank" rel="nofollow" href="
+                
+                    https://beian.miit.gov.cn
+                
+                ">皖ICP备2023018763号</a></div>
+        
+        
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fa-solid fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa-solid fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+    
+<script src="/js/libs/Swup.min.js"></script>
+
+<script src="/js/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/libs/SwupPreloadPlugin.min.js"></script>
+
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+
+
+
+<script src="/js/tools/imageViewer.js" type="module"></script>
+
+<script src="/js/utils.js" type="module"></script>
+
+<script src="/js/main.js" type="module"></script>
+
+<script src="/js/layouts/navbarShrink.js" type="module"></script>
+
+<script src="/js/tools/scrollTopBottom.js" type="module"></script>
+
+<script src="/js/tools/lightDarkSwitch.js" type="module"></script>
+
+<script src="/js/layouts/categoryList.js" type="module"></script>
+
+
+
+    
+<script src="/js/tools/localSearch.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/tools/codeBlock.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/layouts/lazyload.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/tools/runtime.js"></script>
+
+    
+<script src="/js/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="/js/libs/Typed.min.js"></script>
+
+  
+<script src="/js/plugins/typed.js" type="module"></script>
+
+
+
+
+
+
+    
+<script src="/js/libs/minimasonry.min.js"></script>
+
+    
+<script src="/js/plugins/masonry.js" type="module"></script>
+
+
+
+
+<div class="post-scripts" data-swup-reload-script>
+    
+        
+<script src="/js/libs/anime.min.js"></script>
+
+        
+<script src="/js/tools/tocToggle.js" type="module"></script>
+
+<script src="/js/layouts/toc.js" type="module"></script>
+
+<script src="/js/plugins/tabs.js" type="module"></script>
+
+    
+</div>
+
+
+    <div id="aplayer"></div>
+
+<script src="/js/libs/APlayer.min.js"></script>
+
+
+<script src="/js/plugins/aplayer.js"></script>
+
+
+</body>
+</html>
